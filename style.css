@@ -1,3 +1,15 @@
+/* Color Palette Variables */
+:root {
+    --academic-blue: #0f4c81;
+    --academic-blue-dark: #0a3356;
+    --agro-green: #2e7d32;
+    --agro-green-light: #e8f5e9;
+    --text-dark: #2d3748;
+    --text-muted: #718096;
+    --bg-light: #f4f7f6; /* Subtle greenish-tinted grey background */
+    --card-bg: #ffffff;
+}
+
 /* Base Resets & Global Styles */
 * {
     margin: 0;
