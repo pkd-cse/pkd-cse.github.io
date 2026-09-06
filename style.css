@@ -14,7 +14,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -24,8 +24,8 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #2d3748;
-    background-color: #f7fafc;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
 }
 
 /* Sticky Navbar Styles */
@@ -34,9 +34,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(15, 76, 129, 0.08);
     z-index: 1000;
+    border-bottom: 3px solid var(--agro-green);
 }
 
 .nav-container {
@@ -50,7 +51,7 @@ body {
 
 .nav-logo {
     font-weight: 700;
-    color: #1a202c;
+    color: var(--academic-blue);
     text-decoration: none;
     font-size: 1.15rem;
 }
@@ -64,32 +65,33 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #4a5568;
+    color: var(--text-dark);
     font-weight: 500;
     font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #2b6cb0;
+    color: var(--agro-green);
 }
 
 .nav-links .nav-cv-btn {
-    background-color: #2b6cb0;
+    background-color: var(--agro-green);
     color: #ffffff;
     padding: 8px 16px;
     border-radius: 6px;
+    transition: background-color 0.2s ease;
 }
 
 .nav-links .nav-cv-btn:hover {
-    background-color: #2c5282;
+    background-color: #1b5e20;
     color: #ffffff;
 }
 
 /* Page Container Grid Layout */
 .main-container {
     max-width: 1200px;
-    margin: 100px auto 40px auto;
+    margin: 110px auto 40px auto;
     display: grid;
     grid-template-columns: 320px 1fr;
     gap: 40px;
@@ -99,16 +101,17 @@ body {
 /* Sidebar Styling */
 .profile-sidebar {
     position: sticky;
-    top: 90px;
+    top: 100px;
     height: fit-content;
 }
 
 .profile-card {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     padding: 30px 24px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     text-align: center;
+    border-top: 4px solid var(--academic-blue);
 }
 
 .profile-img {
@@ -123,18 +126,18 @@ body {
 
 .profile-card h2 {
     font-size: 1.4rem;
-    color: #1a202c;
+    color: var(--academic-blue);
     margin-bottom: 8px;
 }
 
 .designation {
     font-weight: 600;
-    color: #2b6cb0;
+    color: var(--agro-green);
     font-size: 0.95rem;
 }
 
 .department, .university {
-    color: #718096;
+    color: var(--text-muted);
     font-size: 0.88rem;
     margin-top: 2px;
 }
@@ -148,7 +151,7 @@ body {
 .contact-info {
     text-align: left;
     font-size: 0.88rem;
-    color: #4a5568;
+    color: var(--text-dark);
     margin-bottom: 25px;
 }
 
@@ -176,22 +179,22 @@ body {
 }
 
 .btn-primary {
-    background-color: #2b6cb0;
+    background-color: var(--academic-blue);
     color: #ffffff;
 }
 
 .btn-primary:hover {
-    background-color: #2c5282;
+    background-color: var(--academic-blue-dark);
 }
 
 .btn-secondary {
     background-color: #edf2f7;
-    color: #4a5568;
+    color: var(--text-dark);
 }
 
 .btn-secondary:hover {
     background-color: #e2e8f0;
-    color: #2d3748;
+    color: var(--academic-blue);
 }
 
 /* Main Content Area Elements */
@@ -202,18 +205,18 @@ body {
 }
 
 .content-section {
-    background-color: #ffffff;
+    background-color: var(--card-bg);
     border-radius: 12px;
     padding: 35px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 .section-title {
     font-size: 1.35rem;
-    color: #1a202c;
+    color: var(--academic-blue);
     margin-bottom: 20px;
     padding-bottom: 8px;
-    border-bottom: 2px solid #edf2f7;
+    border-bottom: 2px solid var(--agro-green-light);
 }
 
 /* Research Interests List */
@@ -224,6 +227,10 @@ body {
 
 .interests-list li {
     margin-bottom: 8px;
+}
+
+.interests-list li::marker {
+    color: var(--agro-green);
 }
 
 /* Publication Styling */
@@ -239,8 +246,8 @@ body {
 }
 
 .pub-year {
-    background-color: #ebf8ff;
-    color: #2b6cb0;
+    background-color: var(--agro-green-light);
+    color: var(--agro-green);
     font-weight: 700;
     font-size: 0.9rem;
     padding: 4px 12px;
@@ -251,25 +258,26 @@ body {
 
 .pub-title {
     font-weight: 600;
-    color: #1a202c;
+    color: var(--text-dark);
     margin-bottom: 4px;
 }
 
 .pub-authors, .pub-journal {
     font-size: 0.9rem;
-    color: #4a5568;
+    color: var(--text-muted);
 }
 
 .pub-link {
     display: inline-block;
     margin-top: 6px;
     font-size: 0.85rem;
-    color: #2b6cb0;
+    color: var(--academic-blue);
     text-decoration: none;
     font-weight: 500;
 }
 
 .pub-link:hover {
+    color: var(--agro-green);
     text-decoration: underline;
 }
 
@@ -279,10 +287,11 @@ body {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 15px;
+    transition: border-color 0.2s ease;
 }
 
-.project-card:last-child {
-    margin-bottom: 0;
+.project-card:hover {
+    border-color: var(--academic-blue);
 }
 
 .project-header {
@@ -294,7 +303,7 @@ body {
 
 .project-header h4 {
     font-size: 1.1rem;
-    color: #1a202c;
+    color: var(--academic-blue);
 }
 
 .project-status {
@@ -306,41 +315,46 @@ body {
 }
 
 .status-active {
-    background-color: #feebc8;
-    color: #c05621;
+    background-color: #fff3cd;
+    color: #856404;
 }
 
 .status-completed {
-    background-color: #c6f6d5;
-    color: #22543d;
+    background-color: var(--agro-green-light);
+    color: var(--agro-green);
 }
 
 .project-role {
     font-size: 0.9rem;
-    color: #4a5568;
+    color: var(--text-dark);
     margin-bottom: 6px;
 }
 
 .project-desc {
     font-size: 0.92rem;
-    color: #718096;
+    color: var(--text-muted);
 }
 
 /* CV Accent Box */
 .cv-box {
     text-align: center;
-    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
-    border: 1px dashed #cbd5e0;
+    background: linear-gradient(135deg, #ffffff 0%, var(--agro-green-light) 100%);
+    border: 1px dashed var(--agro-green);
 }
 
 .cv-box p {
     margin-bottom: 20px;
-    color: #4a5568;
+    color: var(--text-dark);
 }
 
 .large-btn {
     padding: 12px 30px;
     font-size: 1rem;
+    background-color: var(--agro-green);
+}
+
+.large-btn:hover {
+    background-color: #1b5e20;
 }
 
 /* Footer Section */
@@ -348,26 +362,28 @@ body {
     text-align: center;
     padding: 30px 20px;
     font-size: 0.85rem;
-    color: #718096;
+    color: var(--text-muted);
     margin-top: 40px;
     border-top: 1px solid #e2e8f0;
-    background-color: #ffffff;
+    background-color: var(--card-bg);
 }
 
 .footer a {
-    color: #4a5568;
+    color: var(--academic-blue);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .footer a:hover {
     text-decoration: underline;
+    color: var(--agro-green);
 }
 
 /* Responsive Breakdown (Mobile Optimization) */
 @media (max-width: 900px) {
     .main-container {
         grid-template-columns: 1fr;
-        margin-top: 80px;
+        margin-top: 110px;
         gap: 25px;
     }
     
@@ -378,7 +394,7 @@ body {
     
     .nav-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
     
     .nav-links {
@@ -386,3 +402,4 @@ body {
         font-size: 0.85rem;
     }
 }
+
