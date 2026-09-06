@@ -3,260 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PKD Portal</title>
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f4f7f6;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Header & Navigation */
-        header {
-            background-color: #1a1a2e;
-            color: #fff;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #4e84e5;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #4e84e5;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            color: #fff;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #b0b0b0;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #4e84e5;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #3567bf;
-        }
-
-        /* Main Content Container */
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        /* Grid Section */
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #4e84e5;
-            margin: 0.5rem auto 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-        }
-
-        .card h3 {
-            margin-bottom: 1rem;
-            color: #1a1a2e;
-        }
-
-        /* Resume Section */
-        .resume-section {
-            background-color: #fff;
-            padding: 3rem 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 4rem;
-            text-align: center;
-        }
-
-        .resume-section p {
-            max-width: 700px;
-            margin: 0 auto 1.5rem;
-            color: #555;
-        }
-
-        .btn-resume {
-            background-color: #2e7d32;
-        }
-
-        .btn-resume:hover {
-            background-color: #1b5e20;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1a1a2e;
-            color: #888;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 5rem;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            nav ul li {
-                margin: 0 1rem;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-        }
-    </style>
+    <title>Dr. [Your Name] | Faculty - Sylhet Agricultural University</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for crisp academic typography -->
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <div class="logo">pkd-cse.github.io</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">SAU Faculty Portal</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
+                <li><a href="#cv" class="nav-cv-btn">Download CV</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <!-- Hero Showcase Section -->
-    <section class="hero" id="home">
-        <h1>Welcome to My Web Portal</h1>
-        <p>Hi, I am pkd-cse. This is my central hub for projects, computer science experiments, and technical documentation.</p>
-        <a href="#projects" class="btn">Explore My Work</a>
-    </section>
-
-    <!-- Main Content -->
-    <main class="container">
+    <!-- Main Content Layout -->
+    <div class="main-container">
         
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2 class="section-title">Featured Portal Hubs</h2>
-            <div class="grid">
-                <!-- Card 1 -->
-                <div class="card">
-                    <h3>Project Showcase</h3>
-                    <p>A curated compilation of web development, systems software, and programming tools built throughout my developer journey.</p>
+        <!-- Sidebar - Personal Info Card -->
+        <aside class="profile-sidebar" id="about">
+            <div class="profile-card">
+                <!-- Replace 'profile.jpg' with your actual image filename inside the repo -->
+                <img src="profile.jpg" alt="Faculty Photo" class="profile-img">
+                <h2>Dr. [Your Name]</h2>
+                <p class="designation">Assistant Professor / Professor</p>
+                <p class="department">Department of [Your Department]</p>
+                <p class="university">Sylhet Agricultural University</p>
+                
+                <div class="sidebar-divider"></div>
+                
+                <div class="contact-info">
+                    <p><strong>Email:</strong> username.dept@sau.ac.bd</p>
+                    <p><strong>Office:</strong> Faculty Building, Room XYZ</p>
+                    <p><strong>Sylhet, Bangladesh</strong></p>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card">
-                    <h3>Technical Blog</h3>
-                    <p>Articles, notes, and tutorials breaking down deep concepts in computer science, software engineering, and clean architecture.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card">
-                    <h3>Contact & Links</h3>
-                    <p>Connect with me via GitHub, LinkedIn, or email. Open to tech collaborations, code reviews, and remote development opportunities.</p>
+                <!-- Academic Profiles & CV Link -->
+                <div class="profile-actions">
+                    <!-- Replace 'my-cv.pdf' with your actual PDF filename inside the repo -->
+                    <a href="my-cv.pdf" download class="btn btn-primary">📄 Download Full CV (PDF)</a>
+                    <a href="https://google.com" target="_blank" class="btn btn-secondary">Google Scholar</a>
+                    <a href="https://researchgate.net" target="_blank" class="btn btn-secondary">ResearchGate</a>
                 </div>
             </div>
-        </section>
+        </aside>
 
-        <!-- Resume Section -->
-        <section class="resume-section" id="resume">
-            <h2 class="section-title">Experience & Background</h2>
-            <p>Interested in my technical skillset, academic background, or previous engineering experience? Download my comprehensive professional resume below or contact me for opportunities.</p>
-            <!-- Replace 'resume.pdf' with your actual file name -->
-            <a href="resume.pdf" download class="btn btn-resume">⬇️ Download Resume (PDF)</a>
-        </section>
+        <!-- Main Content Area -->
+        <main class="content-area">
+            
+            <!-- Research Interests Section -->
+            <section id="research" class="content-section">
+                <h3 class="section-title">Research Interests</h3>
+                <p>Provide a summary here regarding your academic focus, domains of expertise, and overall methodology. As a faculty member at Sylhet Agricultural University, you can elaborate on how your research addresses regional or global challenges.</p>
+                <ul class="interests-list">
+                    <li>Core Focus Area 1 (e.g., Sustainable Agriculture / Climate Resilience)</li>
+                    <li>Core Focus Area 2 (e.g., Veterinary Epidemiology / Livestock Genetics)</li>
+                    <li>Core Focus Area 3 (e.g., Soil Science / Crop Protection)</li>
+                    <li>Data Analytics & Machine Learning applications in Smart Farming</li>
+                </ul>
+            </section>
 
-    </main>
+            <!-- Publications Section -->
+            <section id="publications" class="content-section">
+                <h3 class="section-title">Selected Publications</h3>
+                <div class="publication-item">
+                    <span class="pub-year">2026</span>
+                    <div class="pub-details">
+                        <p class="pub-title">"Optimizing Crop Yield and Disease Resistance Using Advanced Genetic Markers"</p>
+                        <p class="pub-authors"><strong>[Your Name]</strong>, Rahman, M. A., & Smith, J.</p>
+                        <p class="pub-journal"><em>Journal of Agricultural Science</em>, 45(2), 112-125.</p>
+                        <a href="#" class="pub-link" target="_blank">View Publisher Site [DOI Link]</a>
+                    </div>
+                </div>
+
+                <div class="publication-item">
+                    <span class="pub-year">2025</span>
+                    <div class="pub-details">
+                        <p class="pub-title">"A Comparative Analysis of Soil Microflora in the Sylhet Region"</p>
+                        <p class="pub-authors">Ahmed, S. & <strong>[Your Name]</strong></p>
+                        <p class="pub-journal"><em>Bangladesh Journal of Agro-Research</em>, 12(4), 301-315.</p>
+                        <a href="#" class="pub-link" target="_blank">View Pre-print</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <h3 class="section-title">Research Projects & Grants</h3>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Eco-Friendly Agro-Tech Development Framework</h4>
+                        <span class="project-status status-active">Ongoing</span>
+                    </div>
+                    <p class="project-role"><strong>Role:</strong> Principal Investigator (PI)</p>
+                    <p class="project-desc">Funded by the University Grants Commission (UGC) / Ministry of Science and Technology. This project investigates sustainable farming tools optimized for the regional topography of Sylhet.</p>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h4>Epidemiological Survey of Livestock Illnesses</h4>
+                        <span class="project-status status-completed">Completed</span>
+                    </div>
+                    <p class="project-role"><strong>Role:</strong> Co-Investigator (Co-PI)</p>
+                    <p class="project-desc">A joint collaborative study identifying common seasonal diseases affecting poultry and cattle in northeastern Bangladesh.</p>
+                </div>
+            </section>
+
+            <!-- Quick Download CV Footer Anchor Section -->
+            <section id="cv" class="content-section cv-box">
+                <h3>Curriculum Vitae</h3>
+                <p>For a detailed breakdown of my academic experience, teaching history, committee memberships, and full list of publications, please access my full CV below.</p>
+                <a href="my-cv.pdf" download class="btn btn-primary large-btn">💾 Download Curriculum Vitae (PDF)</a>
+            </section>
+
+        </main>
+    </div>
 
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 pkd-cse. Built natively with GitHub Pages.</p>
+    <footer class="footer">
+        <p>&copy; 2026 Dr. [Your Name]. All Rights Reserved. | <a href="https://sau.ac.bd" target="_blank">Sylhet Agricultural University</a></p>
     </footer>
 
 </body>
 </html>
+
