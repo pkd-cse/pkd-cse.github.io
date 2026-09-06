@@ -89,6 +89,43 @@ body {
     color: #777;
 }
 
+/* Social Icons Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0 5px 0;
+}
+
+.social-icons a {
+    color: #555; /* Default gray color */
+    font-size: 1.4rem;
+    transition: color 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+
+/* Hover effects with brand specific colors */
+.social-icons a:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+}
+
+.social-icons a[title="LinkedIn"]:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-icons a[title="Google Scholar"]:hover {
+    color: #4285f4; /* Google Blue */
+}
+
+.social-icons a[title="GitHub"]:hover {
+    color: #24292e; /* GitHub Dark Gray */
+}
+
+.social-icons a[title="ORCID"]:hover {
+    color: #a6ce39; /* ORCID Green */
+}
+
+
 .sidebar hr {
     margin: 20px 0;
     border: 0;
