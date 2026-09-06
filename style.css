@@ -22,9 +22,9 @@
 }
 
 .designation-text {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--text-dark);
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 /* Icon Link List formatting */
