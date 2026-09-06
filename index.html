@@ -3,98 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. [Your Name] | CSE Faculty | Sylhet Agricultural University</title>
+    <title>Dr. [Your Name] | Faculty of CSE | SAU</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <!-- Banner Picture -->
-    <div class="banner"></div>
+    <!-- Banner Header -->
+    <header class="banner">
+        <div class="banner-overlay">
+            <h1>Sylhet Agricultural University</h1>
+            <p>Department of Computer Science and Engineering</p>
+        </div>
+    </header>
 
-    <!-- Main Container -->
     <div class="container">
-        
-        <!-- Sidebar Layout -->
+        <!-- Left Sidebar (Personal Info) -->
         <aside class="sidebar">
-            <div class="profile-card">
-                <!-- Replace with your profile image filename -->
-                <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-                <h2>Dr. [Your Name]</h2>
-                <p class="title">Assistant Professor / Lecturer</p>
-                <p class="dept">Dept. of Computer Science & Engineering</p>
-                <p class="university">Sylhet Agricultural University</p>
-            </div>
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>Dr. [Your Name]</h2>
+            <p class="title">Assistant Professor / Lecturer</p>
+            <p class="dept">Dept. of Computer Science & Engineering</p>
+            <p class="inst">Sylhet Agricultural University</p>
+            
+            <hr>
 
             <div class="contact-info">
-                <h3>Contact Info</h3>
-                <ul>
-                    <li><i class="fa-solid fa-envelope"></i> email@sau.ac.bd</li>
-                    <li><i class="fa-solid fa-location-dot"></i> Sylhet, Bangladesh</li>
-                </ul>
-            </div>
-
-            <div class="social-links">
-                <a href="#" target="_blank" title="Google Scholar"><i class="fa-graduation-cap"></i></a>
-                <a href="#" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="#" target="_blank" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
-                <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <p><strong>Email:</strong> name.cse@sau.ac.bd</p>
+                <p><strong>Office:</strong> Faculty of Agricultural Engineering & Technology</p>
             </div>
 
             <!-- Downloadable CV Button -->
-            <!-- Replace 'your-cv.pdf' with your actual CV file name -->
-            <a href="your-cv.pdf" class="download-btn" download>
-                <i class="fa-solid fa-file-arrow-down"></i> Download CV
-            </a>
+            <a href="cv.pdf" download class="btn-cv">Download CV (PDF)</a>
         </aside>
 
-        <!-- Main Content Area -->
+        <!-- Main Content Area (Right Side) -->
         <main class="main-content">
             
-            <!-- Personal Info / Biography -->
+            <!-- Biography / About Me -->
             <section id="about">
-                <h2><i class="fa-solid fa-user"></i> About Me</h2>
-                <p>Welcome to my academic portal. I am a faculty member in the Department of Computer Science and Engineering (CSE) at <strong>Sylhet Agricultural University</strong>. My work focuses on leveraging computer science solutions to solve complex problems, with a particular interest in agricultural informatics, machine learning, and data science.</p>
-                <p>I completed my graduation in Computer Science and Engineering and am currently engaged in teaching undergraduate courses and mentoring students in their thesis projects.</p>
+                <h2>Biography</h2>
+                <p>Welcome to my academic portal. I am a faculty member in the Department of Computer Science and Engineering at Sylhet Agricultural University, Sylhet, Bangladesh. My work focuses on teaching undergraduate courses, mentoring student projects, and conducting research in computing and agricultural applications.</p>
             </section>
 
             <!-- Research Interests -->
             <section id="research">
-                <h2><i class="fa-solid fa-microscope"></i> Research Interests</h2>
-                <ul class="bullet-list">
-                    <li><strong>Agricultural Informatics:</strong> Smart farming, precision agriculture, and IoT device deployment.</li>
-                    <li><strong>Machine Learning & Computer Vision:</strong> Plant disease detection and crop yield prediction models.</li>
-                    <li><strong>Data Science:</strong> Big data analytics in biological and climate datasets.</li>
+                <h2>Research Interests</h2>
+                <ul>
+                    <li><strong>Bioinformatics & Agricultural Informatics:</strong> Smart farming, crop disease detection using computer vision.</li>
+                    <li><strong>Machine Learning & Data Science:</strong> Predictive modeling, neural networks.</li>
+                    <li><strong>Internet of Things (IoT):</strong> Automated systems for precision agriculture.</li>
                 </ul>
             </section>
 
             <!-- Publications -->
             <section id="publications">
-                <h2><i class="fa-solid fa-book"></i> Selected Publications</h2>
-                <div class="publication-item">
-                    <span class="pub-year">2026</span>
-                    <p class="pub-details">
-                        <strong>[Your Name]</strong>, Co-author A., & Co-author B. "Deep Learning Framework for Automated Crop Disease Diagnosis." <em>Journal of Agricultural Systems</em>, vol. 12, pp. 45-56. 
-                        <a href="#" target="_blank" class="pub-link">[DOI / Link]</a>
-                    </p>
-                </div>
-                <div class="publication-item">
-                    <span class="pub-year">2025</span>
-                    <p class="pub-details">
-                        Co-author A. & <strong>[Your Name]</strong>. "IoT-Based Environmental Monitoring in Sub-Tropical Regions." <em>IEEE International Conference on CSE</em>. 
-                        <a href="#" target="_blank" class="pub-link">[Publisher Link]</a>
-                    </p>
-                </div>
+                <h2>Selected Publications</h2>
+                <ol>
+                    <li>
+                        <strong>Author, A.</strong>, Author, B. (2026). "An IoT-Based Smart Irrigation System for Regional Crops in Sylhet." <em>International Journal of Agricultural Computing</em>, 12(2), 45-55.
+                    </li>
+                    <li>
+                        Author, A., <strong>Your Name</strong>. (2025). "Deep Learning Architectures for Early Detection of Tea Leaf Diseases." <em>IEEE Access</em>, 13, 1102-1115.
+                    </li>
+                </ol>
             </section>
 
-            <!-- Teaching -->
+            <!-- Teaching / Relevant Info -->
             <section id="teaching">
-                <h2><i class="fa-solid fa-chalkboard-user"></i> Teaching</h2>
-                <ul class="bullet-list">
+                <h2>Teaching & Courses</h2>
+                <ul>
                     <li>CSE-101: Structured Programming Language</li>
                     <li>CSE-302: Database Management Systems</li>
-                    <li>CSE-401: Artificial Intelligence and Expert Systems</li>
+                    <li>CSE-401: Artificial Intelligence</li>
                 </ul>
             </section>
 
@@ -103,7 +83,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Dr. [Your Name] | Department of CSE, Sylhet Agricultural University</p>
+        <p>&copy; 2026 Dr. [Your Name]. All Rights Reserved. Hosted on GitHub Pages.</p>
     </footer>
 
 </body>
