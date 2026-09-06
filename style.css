@@ -10,6 +10,65 @@
     --card-bg: #ffffff;
 }
 
+/* Sidebar adjustments to match the clean left-aligned list image */
+.profile-card.align-left {
+    text-align: left;
+}
+
+.pronouns {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.designation-text {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+/* Icon Link List formatting */
+.icon-link-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.icon-link-list li, 
+.icon-link-list a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 0.95rem;
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.icon-link-list a:hover {
+    color: var(--academic-blue);
+}
+
+/* Standardized Icon Widths to keep text perfectly vertical */
+.icon-link-list i {
+    width: 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #4a5568;
+}
+
+/* Color accents matching standard branding if preferred */
+.icon-link-list .fa-linkedin {
+    color: #0077b5;
+}
+.icon-link-list .fa-github {
+    color: #24292e;
+}
+
+
 /* Base Resets & Global Styles */
 * {
     margin: 0;
