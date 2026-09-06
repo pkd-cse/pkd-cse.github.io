@@ -146,6 +146,30 @@
             color: #1a1a2e;
         }
 
+        /* Resume Section */
+        .resume-section {
+            background-color: #fff;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .resume-section p {
+            max-width: 700px;
+            margin: 0 auto 1.5rem;
+            color: #555;
+        }
+
+        .btn-resume {
+            background-color: #2e7d32;
+        }
+
+        .btn-resume:hover {
+            background-color: #1b5e20;
+        }
+
         /* Footer */
         footer {
             background-color: #1a1a2e;
@@ -180,7 +204,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
             </ul>
         </nav>
     </header>
@@ -192,30 +216,41 @@
         <a href="#projects" class="btn">Explore My Work</a>
     </section>
 
-    <!-- Main Projects Section -->
-    <main class="container" id="projects">
-        <h2 class="section-title">Featured Portal Hubs</h2>
-        <div class="grid">
-            
-            <!-- Card 1 -->
-            <div class="card">
-                <h3>Project Showcase</h3>
-                <p>A curated compilation of web development, systems software, and programming tools built throughout my developer journey.</p>
-            </div>
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Featured Portal Hubs</h2>
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <h3>Project Showcase</h3>
+                    <p>A curated compilation of web development, systems software, and programming tools built throughout my developer journey.</p>
+                </div>
 
-            <!-- Card 2 -->
-            <div class="card">
-                <h3>Technical Blog</h3>
-                <p>Articles, notes, and tutorials breaking down deep concepts in computer science, software engineering, and clean architecture.</p>
-            </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <h3>Technical Blog</h3>
+                    <p>Articles, notes, and tutorials breaking down deep concepts in computer science, software engineering, and clean architecture.</p>
+                </div>
 
-            <!-- Card 3 -->
-            <div class="card">
-                <h3>Contact & Links</h3>
-                <p>Connect with me via GitHub, LinkedIn, or email. Open to tech collaborations, code reviews, and remote development opportunities.</p>
+                <!-- Card 3 -->
+                <div class="card">
+                    <h3>Contact & Links</h3>
+                    <p>Connect with me via GitHub, LinkedIn, or email. Open to tech collaborations, code reviews, and remote development opportunities.</p>
+                </div>
             </div>
+        </section>
 
-        </div>
+        <!-- Resume Section -->
+        <section class="resume-section" id="resume">
+            <h2 class="section-title">Experience & Background</h2>
+            <p>Interested in my technical skillset, academic background, or previous engineering experience? Download my comprehensive professional resume below or contact me for opportunities.</p>
+            <!-- Replace 'resume.pdf' with your actual file name -->
+            <a href="resume.pdf" download class="btn btn-resume">⬇️ Download Resume (PDF)</a>
+        </section>
+
     </main>
 
     <!-- Footer -->
