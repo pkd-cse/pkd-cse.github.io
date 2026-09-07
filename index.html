@@ -30,7 +30,7 @@
                 <p class="hub-subtitle">[Your Designation] &bull; Department of [Your Department]</p>
                 <p class="hub-institution"><i class="fa-solid fa-building-columns"></i> Sylhet Agricultural University, Bangladesh</p>
                 
-                <!-- Modern Iconic Text Link Row -->
+                <!-- Modern Iconic Text Link Matrix -->
                 <div class="iconic-links-row">
                     <a href="mailto:your.email@sau.ac.bd" class="iconic-link link-email">
                         <span class="link-icon"><i class="fa-solid fa-envelope"></i></span>
@@ -52,10 +52,11 @@
             </div>
         </header>
 
-        <!-- Main Navigation Tab bar -->
+        <!-- Main Navigation Tab bar (Updated to 4 Tabs) -->
         <nav class="tab-bar">
             <button class="tab-btn active" onclick="switchTab(event, 'about-tab')">Biography</button>
-            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research & Projects</button>
+            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research Interests</button>
+            <button class="tab-btn" onclick="switchTab(event, 'project-tab')">Projects</button>
             <button class="tab-btn" onclick="switchTab(event, 'pub-tab')">Publications</button>
         </nav>
 
@@ -70,24 +71,27 @@
                 </div>
             </div>
 
-            <!-- Tab: Research & Projects -->
+            <!-- Tab: Research Interests -->
             <div id="research-tab" class="tab-content">
-                <div class="content-split-grid">
-                    <div class="grid-card">
-                        <h3><i class="fa-solid fa-microscope text-accent"></i> Core Interests</h3>
-                        <ul class="styled-list">
-                            <li>Climate-Resilient Smart Agriculture</li>
-                            <li>Wetland Hydrology & Crop Management</li>
-                            <li>Decentralized Data Arrays in Agriculture</li>
-                        </ul>
-                    </div>
-                    <div class="grid-card">
-                        <h3><i class="fa-solid fa-diagram-project text-accent"></i> Active Projects</h3>
-                        <div class="project-mini-card">
-                            <h4>Automated Haor Basin Sensor Matrix</h4>
-                            <p class="meta">Role: Principal Investigator &bull; Funding: UGC</p>
-                            <p>Developing low-impact telemetry layouts to map wetland soil shifts dynamically.</p>
-                        </div>
+                <div class="bio-card">
+                    <h3><i class="fa-solid fa-microscope text-accent"></i> Core Research Areas</h3>
+                    <p class="tab-intro-text">My academic investigation explores sustainable paradigms and field deployments targeting ecological resilience:</p>
+                    <ul class="styled-list">
+                        <li>Climate-Resilient Smart Agriculture & Cultivation Frameworks</li>
+                        <li>Wetland Hydrology & Crop Management in North-Eastern Ecosystems</li>
+                        <li>Decentralized IoT Data Arrays and Automation in Precision Farming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab: Projects -->
+            <div id="project-tab" class="tab-content">
+                <div class="project-matrix">
+                    <div class="project-detailed-card">
+                        <div class="project-status active">Active Grant</div>
+                        <h3>Automated Haor Basin Sensor Matrix Framework</h3>
+                        <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC)</p>
+                        <p class="project-desc">Developing low-impact wireless telemetry layouts to map wetland soil parameter shifts dynamically over changing seasonal deluge lines.</p>
                     </div>
                 </div>
             </div>
