@@ -61,7 +61,7 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     text-align: left;
     height: fit-content;
-    align-items: flex-start;
+    
 }
 
 .profile-pic {
@@ -96,6 +96,8 @@ body {
     justify-content: left;
     gap: 15px;
     margin: 15px 0 5px 0;
+    align-items: flex-start;
+    
 }
 
 .social-icons a {
