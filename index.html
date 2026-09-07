@@ -3,147 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Profile | Sylhet Agricultural University</title>
+    <title>Faculty Portal | Sylhet Agricultural University</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
+    <!-- Google Fonts & Font Awesome Icons -->
     <link href="https://googleapis.com" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <div class="split-layout">
+    <div class="portal-wrapper">
         
-        <!-- Left Panel: Permanent Sidebar Dashboard -->
-        <aside class="left-canvas">
-            <div class="sidebar-sticky-content">
-                
-                
-                    <!-- Replace 'profile.jpg' with your photo -->
-                    <img src="profile.jpg" alt="Faculty Picture" class="circular-avatar">
+        <!-- Top Profile Hub Header -->
+        <header class="profile-hub">
+            <div class="hub-avatar-area">
+                <img src="profile.jpg" alt="Faculty Picture" class="hub-avatar">
+            </div>
+            
+            <div class="hub-info-area">
+                <div class="title-row">
                     <h1>Dr. [Your Name]</h1>
-                    <span class="title-tag">[Your Designation]</span>
-                </div>
-
-                <div class="institution-card">
-                    <p class="inst-name">Sylhet Agricultural University</p>
-                    <p class="dept-name">Dept. of [Your Department]</p>
-                    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Sylhet, Bangladesh</p>
-                </div>
-
-                <!-- Internal Section Navigator -->
-                <nav class="section-nav">
-                    <a href="#about" class="nav-item"><i class="fa-solid fa-user-tie"></i> Biography</a>
-                    <a href="#research" class="nav-item"><i class="fa-solid fa-flask"></i> Research</a>
-                    <a href="#publications" class="nav-item"><i class="fa-solid fa-scroll"></i> Publications</a>
-                    <a href="#projects" class="nav-item"><i class="fa-solid fa-folder-open"></i> Projects</a>
-                </nav>
-
-                <!-- Icon-based Contact Matrix -->
-                <div class="contact-matrix">
-                    <a href="mailto:your.email@sau.ac.bd" class="matrix-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://linkedin.com" class="matrix-btn" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://google.com" class="matrix-btn" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
-                </div>
-
-                <div class="action-footer">
-                    <a href="cv.pdf" download class="btn-primary-cv">
-                        <i class="fa-solid fa-cloud-arrow-down"></i> Download CV (PDF)
+                    <a href="cv.pdf" download class="cv-badge-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Curriculum Vitae
                     </a>
                 </div>
-
+                <p class="hub-subtitle">[Your Designation] &bull; Department of [Your Department]</p>
+                <p class="hub-institution"><i class="fa-solid fa-building-columns"></i> Sylhet Agricultural University, Bangladesh</p>
+                
+                <!-- Compact Metadata Pill Row -->
+                <div class="meta-pill-row">
+                    <a href="mailto:your.email@sau.ac.bd" class="meta-pill"><i class="fa-solid fa-envelope"></i> Email</a>
+                    <a href="https://linkedin.com" target="_blank" class="meta-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://google.com" target="_blank" class="meta-pill"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+                </div>
             </div>
-        </aside>
+        </header>
 
-        <!-- Right Panel: Fluid Main Stream -->
-        <main class="right-canvas">
+        <!-- Main Navigation Tab bar -->
+        <nav class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab(event, 'about-tab')">Biography</button>
+            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research & Projects</button>
+            <button class="tab-btn" onclick="switchTab(event, 'pub-tab')">Publications</button>
+        </nav>
+
+        <!-- Tabbed Content Section -->
+        <main class="tab-window">
             
-            <!-- Section: Bio -->
-            <section id="about" class="stream-section">
-                <div class="section-header">
-                    <span class="section-num">01</span>
-                    <h2>Biography</h2>
+            <!-- Tab: Biography -->
+            <div id="about-tab" class="tab-content active">
+                <div class="bio-card">
+                    <h3>About Me</h3>
+                    <p>Welcome to my academic portal. I serve as a dedicated faculty member at Sylhet Agricultural University. My instructional duties and empirical studies focus closely on pioneering environmental dynamics, regional crop optimizations, and technical agricultural transformations throughout Bangladesh.</p>
                 </div>
-                <div class="section-body">
-                    <p class="lead-paragraph">I am an academic and researcher at Sylhet Agricultural University, driven by sustainable agricultural transformation and ecosystem management strategies across Bangladesh.</p>
-                    <p>My work integrates advanced teaching principles with community-facing agricultural solutions, targeting key agronomic frameworks and structural data methodologies unique to regional farming wetlands.</p>
-                </div>
-            </section>
+            </div>
 
-            <!-- Section: Research -->
-            <section id="research" class="stream-section">
-                <div class="section-header">
-                    <span class="section-num">02</span>
-                    <h2>Research Interests</h2>
-                </div>
-                <div class="section-body">
-                    <div class="research-grid">
-                        <div class="research-node">
-                            <h4>Climate-Smart Agriculture</h4>
-                            <p>Developing structural responses to changing climate matrices in low-lying ecosystems.</p>
-                        </div>
-                        <div class="research-node">
-                            <h4>Wetland Agronomy</h4>
-                            <p>Optimizing crop yields and tracking soil chemical profiles in seasonal haor regions.</p>
+            <!-- Tab: Research & Projects -->
+            <div id="research-tab" class="tab-content">
+                <div class="content-split-grid">
+                    <div class="grid-card">
+                        <h3><i class="fa-solid fa-microscope text-accent"></i> Core Interests</h3>
+                        <ul class="styled-list">
+                            <li>Climate-Resilient Smart Agriculture</li>
+                            <li>Wetland Hydrology & Crop Management</li>
+                            <li>Decentralized Data Arrays in Agriculture</li>
+                        </ul>
+                    </div>
+                    <div class="grid-card">
+                        <h3><i class="fa-solid fa-diagram-project text-accent"></i> Active Projects</h3>
+                        <div class="project-mini-card">
+                            <h4>Automated Haor Basin Sensor Matrix</h4>
+                            <p class="meta">Role: Principal Investigator &bull; Funding: UGC</p>
+                            <p>Developing low-impact telemetry layouts to map wetland soil shifts dynamically.</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- Section: Publications -->
-            <section id="publications" class="stream-section">
-                <div class="section-header">
-                    <span class="section-num">03</span>
-                    <h2>Selected Publications</h2>
-                </div>
-                <div class="section-body">
-                    <div class="timeline-wrapper">
-                        
-                        <div class="timeline-block">
-                            <div class="timeline-meta">2026</div>
-                            <div class="timeline-content">
-                                <h5>Assessing Crop Vulnerability Indexes in North-Eastern Ecosystems</h5>
-                                <p class="authors"><strong>Your Name</strong>, Co-author, B.</p>
-                                <p class="journal"><em>Journal of Eco-Agricultural Engineering</em>, 29(1), pp. 45–60.</p>
-                            </div>
+            <!-- Tab: Publications -->
+            <div id="pub-tab" class="tab-content">
+                <div class="pub-matrix">
+                    <div class="pub-card">
+                        <div class="pub-index-num">01</div>
+                        <div class="pub-details">
+                            <h5>"Advancements in Flood-Resilient Crop Yields in Sylhet Division"</h5>
+                            <p class="authors"><strong>Your Name</strong>, Co-author, B.</p>
+                            <p class="journal"><em>Journal of Agricultural Science</em>, 2026.</p>
                         </div>
-
-                        <div class="timeline-block">
-                            <div class="timeline-meta">2025</div>
-                            <div class="timeline-content">
-                                <h5>Remote Sensing in Floodplain Classification Dynamics</h5>
-                                <p class="authors">Co-author, A., <strong>Your Name</strong>.</p>
-                                <p class="journal"><em>International Agricultural Review</em>, 12(3), pp. 88–94.</p>
-                            </div>
+                    </div>
+                    <div class="pub-card">
+                        <div class="pub-index-num">02</div>
+                        <div class="pub-details">
+                            <h5>"Evaluating Local Soil Microclimates Using Automated Sensor Arrays"</h5>
+                            <p class="authors">Co-author, A., <strong>Your Name</strong>.</p>
+                            <p class="journal"><em>International Agronomy Review</em>, 2025.</p>
                         </div>
-
                     </div>
                 </div>
-            </section>
-
-            <!-- Section: Projects -->
-            <section id="projects" class="stream-section">
-                <div class="section-header">
-                    <span class="section-num">04</span>
-                    <h2>Research Projects</h2>
-                </div>
-                <div class="section-body">
-                    <div class="project-box">
-                        <div class="box-badge">Active Grant</div>
-                        <h3>Decentralized Water Metrics in Agricultural Zones</h3>
-                        <p class="box-meta"><strong>Sponsor:</strong> University Grants Commission | <strong>Role:</strong> Project Director</p>
-                        <p class="box-desc">Deploying scalable hydrological modeling patterns targeting dry-season cultivation efficiency improvements.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Embedded Mini Footer -->
-            <footer class="stream-footer">
-                <p>&copy; 2026 Sylhet Agricultural University. Hosted via GitHub Pages.</p>
-            </footer>
+            </div>
 
         </main>
+
+        <footer class="portal-footer">
+            <p>&copy; 2026 Sylhet Agricultural University &bull; Built via GitHub Pages</p>
+        </footer>
+
     </div>
+
+    <!-- Clean Tab Switching Script -->
+    <script>
+        function switchTab(evt, tabId) {
+            let tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            let tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
