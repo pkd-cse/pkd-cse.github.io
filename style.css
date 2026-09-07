@@ -63,7 +63,7 @@ body {
     position: sticky; /* Makes the sidebar scroll along with the page */
     top: 30px;
     border: 1px solid rgba(0, 45, 98, 0.05);
-    text-align: center; /* Default alignment for the rest of the content */
+    text-align: left; /* Default alignment for the rest of the content */
 }
 
 /* Centered Top Profile Info */
