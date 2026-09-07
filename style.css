@@ -98,34 +98,60 @@ body {
     color: var(--accent);
 }
 
-/* Metadata Icon Link Pills */
-.meta-pill-row {
+/* Modern Iconic Text Link Matrix */
+.iconic-links-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: 20px;
 }
 
-.meta-pill {
-    background-color: var(--bg-main);
-    color: var(--text-primary);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 6px 14px;
-    border-radius: 8px;
+.iconic-link {
     display: flex;
     align-items: center;
-    gap: 6px;
+    text-decoration: none;
+    background-color: #fafafa;
     border: 1px solid var(--border);
-    transition: all 0.2s;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
 }
 
-.meta-pill:hover {
-    background-color: var(--surface);
-    border-color: var(--accent);
-    color: var(--accent);
+.link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.04);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.2s ease;
 }
+
+.link-text {
+    padding: 0 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+/* Individual Brand Accent Focus on Hover */
+.iconic-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #cbd5e1;
+}
+
+.iconic-link:hover .link-text {
+    color: var(--text-primary);
+}
+
+.link-email:hover .link-icon { background-color: #ea4335; color: white; }
+.link-linkedin:hover .link-icon { background-color: #0077b5; color: white; }
+.link-scholar:hover .link-icon { background-color: #4285f4; color: white; }
+.link-github:hover .link-icon { background-color: #24292e; color: white; }
 
 /* Horizontal Segmented Tabs */
 .tab-bar {
@@ -285,15 +311,16 @@ body {
     .profile-hub {
         flex-direction: column;
         text-align: center;
+        padding: 25px;
     }
     .title-row {
         flex-direction: column;
         align-items: center;
     }
     .cv-badge-btn {
-        margin-top: 10px;
+        margin-top: 12px;
     }
-    .meta-pill-row {
+    .iconic-links-row {
         justify-content: center;
     }
     .content-split-grid {
