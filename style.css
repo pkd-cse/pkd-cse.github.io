@@ -51,7 +51,7 @@ body {
     gap: 40px;
 }
 
-/* Modernized Sticky Sidebar Styles */
+/* Hybrid Sidebar Styles */
 .sidebar {
     flex: 1;
     max-width: 300px;
@@ -59,20 +59,21 @@ body {
     padding: 30px 24px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 45, 98, 0.08); /* Soft blue-tinted shadow */
-    text-align: left; /* Centered layout for a cleaner academic look */
     height: fit-content;
     position: sticky; /* Makes the sidebar scroll along with the page */
     top: 30px;
     border: 1px solid rgba(0, 45, 98, 0.05);
+    text-align: left; /* Default alignment for the rest of the content */
 }
 
+/* Centered Top Profile Info */
 .profile-pic {
     width: 140px;
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #002d62;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px auto; /* Centers the image */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: block;
 }
@@ -98,48 +99,60 @@ body {
     font-size: 0.85rem;
     color: #666;
     line-height: 1.4;
-     text-align: center; /* Centers the department and institution */
+    text-align: center; /* Centers the department and institution */
 }
-
-/* Modern Icon Badges Grid */
-.social-icons {
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin: 20px 0;
-}
-
-.social-icons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #f0f4f8;
-    border-radius: 50%;
-    color: #002d62;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-/* Hover effects with brand specific backgrounds */
-.social-icons a:hover {
-    transform: translateY(-3px);
-    color: #ffffff;
-}
-
-.social-icons a[title="LinkedIn"]:hover { background-color: #0077b5; }
-.social-icons a[title="Google Scholar"]:hover { background-color: #4285f4; }
-.social-icons a[title="GitHub"]:hover { background-color: #24292e; }
-.social-icons a[title="Email"]:hover { background-color: #ea4335; }
 
 .sidebar hr {
     margin: 20px 0;
     border: 0;
     border-top: 1px solid #eef2f5;
 }
+
+/* Left-Aligned Icon-Text Vertical List Layout */
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Stack them vertically */
+    gap: 14px;
+    margin: 20px 0;
+    padding-left: 10px; /* Optional slight indent for alignment elegance */
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center; /* Centers icon with text vertically */
+    gap: 12px; /* Gap between icon and text */
+    color: #444; 
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+/* Modern Circle Styling for the Icons */
+.social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: #f0f4f8;
+    border-radius: 50%;
+    color: #002d62;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* Prevents icon distortion */
+}
+
+/* Hover effects: Change icon background color and slide text slightly right */
+.social-icons a:hover {
+    color: #002d62;
+    transform: translateX(4px);
+}
+
+.social-icons a[title="LinkedIn"]:hover i { background-color: #0077b5; color: #fff; }
+.social-icons a[title="Google Scholar"]:hover i { background-color: #4285f4; color: #fff; }
+.social-icons a[title="GitHub"]:hover i { background-color: #24292e; color: #fff; }
+.social-icons a[title="Email"]:hover i { background-color: #ea4335; color: #fff; }
 
 /* CV Download Button */
 .btn-cv {
@@ -156,7 +169,7 @@ body {
     font-size: 0.9rem;
     transition: background 0.2s, transform 0.2s;
     width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 45, 98, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 45, 98, 0.15);
 }
 
 .btn-cv:hover {
