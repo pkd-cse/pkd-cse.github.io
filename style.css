@@ -129,13 +129,13 @@ body {
     height: 30px;
     background-color: rgba(0, 0, 0, 0.04);
     color: var(--text-primary);
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     transition: all 0.2s ease;
 }
 
 .link-text {
     padding: 0 14px;
-    font-size: 0.85rem;
+    font-size: 0.6rem;
     font-weight: 600;
     color: var(--text-muted);
     transition: color 0.2s ease;
