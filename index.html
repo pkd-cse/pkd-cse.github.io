@@ -3,113 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pranajit Kumar Das | CSE | SAU</title>
+    <title>Faculty Profile | Sylhet Agricultural University</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Sidebar Icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
-    <link rel="stylesheet" href="https://jsdelivr.net">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
-    <!-- Banner Header -->
+    <!-- Top Banner -->
     <header class="banner">
         <div class="banner-overlay">
-            <h1>Pranajit Kumar Das</h1>
-            <p>Department of Computer Science and Engineering</p>
+            <h1>Sylhet Agricultural University</h1>
+            <p>Department of [Your Department] | Faculty Portal</p>
         </div>
     </header>
 
     <!-- Main Container -->
     <div class="container">
         
+        <!-- Left Sidebar -->
         <aside class="sidebar">
-    <!-- Circular Profile Picture -->
-    <img src="profile.jpg" alt="Pranajit Kumar Das" class="profile-pic">
-    
-    
-    <h2 class="profile-name">Pranajit Kumar Das</h2>
-    <p class="profile-bio">Faculty Member (Teaching) | Department of CSE | Sylhet Agricultural University</p>
-    
-    <!-- Vertical List Details and Links -->
-    <div class="profile-details-list">
-        <div class="detail-item">
-            <i class="fa-solid fa-location-dot icon-fw"></i>
-            <span>Sylhet, Bangladesh</span>
-        </div>
-        
-        <div class="detail-item">
-            <i class="fa-solid fa-building-columns icon-fw"></i>
-            <span>Sylhet Agricultural University</span>
-        </div>
+            <div class="profile-card">
+                <!-- Replace 'profile.jpg' with your image file name -->
+                <img src="profile.jpg" alt="Professor Name" class="profile-pic">
+                <h2>Dr. [Your Name]</h2>
+                <p class="designation">[Designation, e.g., Associate Professor]</p>
+                <p class="affiliation"><i class="fa-solid fa-building-columns"></i> Sylhet Agricultural University</p>
+                <p class="country"><i class="fa-solid fa-earth-asia"></i> Bangladesh</p>
+            </div>
+            
+            <hr class="separator">
+            
+            <div class="contact-links">
+                <a href="mailto:your.email@sau.ac.bd" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a>
+                <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                <a href="https://google.com" target="_blank"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+            </div>
 
+            <!-- Download CV Button -->
+            <div class="cv-download-box">
+                <a href="cv.pdf" download class="btn-cv"><i class="fa-solid fa-file-pdf"></i> Download CV</a>
+            </div>
+        </aside>
 
-        <a href="mailto:your.email@example.com" target="_blank">
-    <i class="fas fa-envelope"></i> Email
-  </a>
-        
-       
-        
-        <div class="detail-item">
-            <i class="fa-solid fa-graduation-cap icon-fw"></i>
-            <a href="https://google.com" target="_blank">Google Scholar</a>
-        </div>
-        
-        <div class="detail-item">
-            <i class="fa-brands fa-github icon-fw"></i>
-            <a href="https://github.com" target="_blank">GitHub</a>
-        </div>
-        
-        <div class="detail-item">
-            <i class="fa-brands fa-linkedin icon-fw" style="color: #0077b5;"></i>
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        </div>
-    </div>
-
-    <!-- CV Download Button (Placed neatly at the bottom) -->
-    <a href="cv.pdf" download class="btn-cv">Download CV (PDF)</a>
-</aside>
-
-        <!-- Main Content Area -->
+        <!-- Right Main Content Part -->
         <main class="main-content">
-            <section id="about">
-                <h2>Biography</h2>
-                <p>Welcome to my academic portal. I am a faculty member in the Department of Computer Science and Engineering at Sylhet Agricultural University, Sylhet, Bangladesh. My work focuses on teaching undergraduate courses, mentoring student projects, and conducting research in computing and agricultural applications.</p>
+            
+            <!-- Personal Info / Biography Section -->
+            <section id="about" class="content-section">
+                <h2><i class="fa-solid fa-user"></i> About Me</h2>
+                <p>Welcome to my academic portal. I am a faculty member at Sylhet Agricultural University. My teaching and research focus on driving innovations in sustainable agricultural frameworks, environmental impacts, and regional farming systems within Bangladesh.</p>
             </section>
 
-            <section id="research">
-                <h2>Research Interests</h2>
-                <ul>
-                    <li><strong>Bioinformatics & Agricultural Informatics:</strong> Smart farming, crop disease detection using computer vision.</li>
-                    <li><strong>Machine Learning & Data Science:</strong> Predictive modeling, neural networks.</li>
-                    <li><strong>Internet of Things (IoT):</strong> Automated systems for precision agriculture.</li>
+            <!-- Research Interests Section -->
+            <section id="research" class="content-section">
+                <h2><i class="fa-solid fa-microscope"></i> Research Interests</h2>
+                <ul class="interest-list">
+                    <li>Sustainable Agronomy & Crop Management</li>
+                    <li>Climate Change Resilience in South Asian Agriculture</li>
+                    <li>Data-driven Farming Optimization</li>
                 </ul>
             </section>
 
-            <section id="publications">
-                <h2>Selected Publications</h2>
-                <ol>
-                    <li>
-                        <strong>Author, A.</strong>, Author, B. (2026). "An IoT-Based Smart Irrigation System for Regional Crops in Sylhet." <em>International Journal of Agricultural Computing</em>, 12(2), 45-55.
-                    </li>
-                    <li>
-                        Author, A., <strong>Das, P. K.</strong> (2025). "Deep Learning Architectures for Early Detection of Tea Leaf Diseases." <em>IEEE Access</em>, 13, 1102-1115.
-                    </li>
-                </ol>
+            <!-- Publications Section -->
+            <section id="publications" class="content-section">
+                <h2><i class="fa-solid fa-book"></i> Selected Publications</h2>
+                <div class="publication-item">
+                    <span class="pub-year">2026</span>
+                    <p class="pub-details"><strong>Your Name</strong>, Co-author, B. "Advancements in Flood-Resilient Crop Yields in Sylhet Division." <em>Journal of Agricultural Science</em>, 45(2), 112–125.</p>
+                </div>
+                <div class="publication-item">
+                    <span class="pub-year">2025</span>
+                    <p class="pub-details">Co-author, A., <strong>Your Name</strong>. "Evaluating Local Soil Microclimates Using Automated Sensor Arrays." <em>International Agronomy Review</em>, 18(4), 301–315.</p>
+                </div>
             </section>
 
-            <section id="teaching">
-                <h2>Teaching & Courses</h2>
-                <ul>
-                    <li>CSE-101: Structured Programming Language</li>
-                    <li>CSE-302: Database Management Systems</li>
-                    <li>CSE-401: Artificial Intelligence</li>
-                </ul>
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <h2><i class="fa-solid fa-diagram-project"></i> Research Projects</h2>
+                <div class="project-card">
+                    <h3>Smart Irrigation Modeling for North-Eastern Wetlands</h3>
+                    <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding:</strong> University Research Council</p>
+                    <p>Developing low-cost automated water distribution metrics targeting optimization for local Haor region farmers during seasonal dry spells.</p>
+                </div>
             </section>
+
         </main>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Pranajit Kumar Das. All Rights Reserved. Hosted on GitHub Pages.</p>
+    <!-- Minimal Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Sylhet Agricultural University. Powered by GitHub Pages.</p>
     </footer>
 
 </body>
