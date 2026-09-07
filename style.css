@@ -63,7 +63,7 @@ body {
     position: sticky; /* Makes the sidebar scroll along with the page */
     top: 30px;
     border: 1px solid rgba(0, 45, 98, 0.05);
-    text-align: left; /* Default alignment for the rest of the content */
+    text-align: center; /* Default alignment for the rest of the content */
 }
 
 /* Centered Top Profile Info */
@@ -115,11 +115,12 @@ body {
     gap: 14px;
     margin: 20px 0;
     padding-left: 10px; /* Optional slight indent for alignment elegance */
+    text-align: center;
 }
 
 .social-icons a {
     display: flex;
-    align-items: center; /* Centers icon with text vertically */
+    align-items: left; /* Centers icon with text vertically */
     gap: 12px; /* Gap between icon and text */
     color: #444; 
     font-size: 0.95rem;
