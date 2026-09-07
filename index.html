@@ -3,136 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faculty Portal | Sylhet Agricultural University</title>
+    <title>Faculty Profile | Sylhet Agricultural University</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for sleek academic typography -->
+    <!-- Google Fonts -->
     <link href="https://googleapis.com" rel="stylesheet">
-    <!-- Font Awesome Icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cloudflare.com">
-   
 </head>
 <body>
 
-    <!-- Sleek Top Header Navigation -->
-    <header class="top-nav">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="inst-bold">Sylhet Agricultural University</span>
-                <span class="dept-tag">[Your Department]</span>
-            </div>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#research">Research</a>
-                <a href="#publications">Publications</a>
-                <a href="#projects">Projects</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Master Layout Wrapper -->
-    <div class="app-layout">
+    <div class="split-layout">
         
-        <!-- Left Column: Modern Profile Info Card -->
-        <aside class="profile-sidebar">
-            <div class="avatar-wrapper">
-                <!-- Replace 'profile.jpg' with your image path -->
-                <img src="profile.jpg" alt="Faculty Picture" class="avatar">
-            </div>
-            
-            <div class="meta-info">
-                <h1>Dr. [Your Name]</h1>
-                <div class="badge">Faculty Member</div>
+        <!-- Left Panel: Permanent Sidebar Dashboard -->
+        <aside class="left-canvas">
+            <div class="sidebar-sticky-content">
                 
-                <div class="meta-item">
-                    <i class="fa-solid fa-building-columns icon"></i>
-                    <span>Sylhet Agricultural University</span>
+                
+                    <!-- Replace 'profile.jpg' with your photo -->
+                    <img src="profile.jpg" alt="Faculty Picture" class="circular-avatar">
+                    <h1>Dr. [Your Name]</h1>
+                    <span class="title-tag">[Your Designation]</span>
                 </div>
-                <div class="meta-item">
-                    <i class="fa-solid fa-location-dot icon"></i>
-                    <span>Sylhet, Bangladesh</span>
+
+                <div class="institution-card">
+                    <p class="inst-name">Sylhet Agricultural University</p>
+                    <p class="dept-name">Dept. of [Your Department]</p>
+                    <p class="location-tag"><i class="fa-solid fa-location-dot"></i> Sylhet, Bangladesh</p>
                 </div>
-            </div>
 
-            <div class="social-channels">
-                <a href="mailto:your.email@sau.ac.bd" class="channel-link" title="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-                <a href="https://linkedin.com" class="channel-link" target="_blank" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://google.com" class="channel-link" target="_blank" title="Google Scholar">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                </a>
-            </div>
+                <!-- Internal Section Navigator -->
+                <nav class="section-nav">
+                    <a href="#about" class="nav-item"><i class="fa-solid fa-user-tie"></i> Biography</a>
+                    <a href="#research" class="nav-item"><i class="fa-solid fa-flask"></i> Research</a>
+                    <a href="#publications" class="nav-item"><i class="fa-solid fa-scroll"></i> Publications</a>
+                    <a href="#projects" class="nav-item"><i class="fa-solid fa-folder-open"></i> Projects</a>
+                </nav>
 
-            <a href="cv.pdf" download class="download-action">
-                <i class="fa-solid fa-arrow-down-to-line"></i> Download CV (PDF)
-            </a>
+                <!-- Icon-based Contact Matrix -->
+                <div class="contact-matrix">
+                    <a href="mailto:your.email@sau.ac.bd" class="matrix-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com" class="matrix-btn" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://google.com" class="matrix-btn" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+                </div>
+
+                <div class="action-footer">
+                    <a href="cv.pdf" download class="btn-primary-cv">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> Download CV (PDF)
+                    </a>
+                </div>
+
+            </div>
         </aside>
 
-        <!-- Right Column: Structured Data Modules -->
-        <main class="content-hub">
+        <!-- Right Panel: Fluid Main Stream -->
+        <main class="right-canvas">
             
-            <!-- Biography -->
-            <section id="about" class="card-module">
-                <h2 class="module-title">Biography</h2>
-                <p class="bio-text">
-                    Welcome to my academic portal. I serve as a faculty member at Sylhet Agricultural University, dedicated to teaching and pursuing advanced empirical studies. My core mission encompasses bridging agricultural innovations with local challenges across Bangladesh through scientific inquiry.
-                </p>
-            </section>
-
-            <!-- Research Targets -->
-            <section id="research" class="card-module">
-                <h2 class="module-title">Research Areas</h2>
-                <div class="tags-grid">
-                    <span class="tag-chip">Agro-ecosystem Modeling</span>
-                    <span class="tag-chip">Climate Adaptation Metrics</span>
-                    <span class="tag-chip">Precision Farming Systems</span>
-                    <span class="tag-chip">Sustainable Resource Allocation</span>
+            <!-- Section: Bio -->
+            <section id="about" class="stream-section">
+                <div class="section-header">
+                    <span class="section-num">01</span>
+                    <h2>Biography</h2>
+                </div>
+                <div class="section-body">
+                    <p class="lead-paragraph">I am an academic and researcher at Sylhet Agricultural University, driven by sustainable agricultural transformation and ecosystem management strategies across Bangladesh.</p>
+                    <p>My work integrates advanced teaching principles with community-facing agricultural solutions, targeting key agronomic frameworks and structural data methodologies unique to regional farming wetlands.</p>
                 </div>
             </section>
 
-            <!-- Academic Papers -->
-            <section id="publications" class="card-module">
-                <h2 class="module-title">Selected Publications</h2>
-                <ul class="clean-pub-list">
-                    <li>
-                        <div class="pub-row">
-                            <span class="badge-year">2026</span>
-                            <div class="pub-body">
-                                <strong>Your Name</strong>, and Rahman, M. "Optimizing crop distribution models under extreme rainfall variations in north-eastern Bangladesh." <em>Regional Environmental Studies</em>, 32(1), pp. 45–59.
-                            </div>
+            <!-- Section: Research -->
+            <section id="research" class="stream-section">
+                <div class="section-header">
+                    <span class="section-num">02</span>
+                    <h2>Research Interests</h2>
+                </div>
+                <div class="section-body">
+                    <div class="research-grid">
+                        <div class="research-node">
+                            <h4>Climate-Smart Agriculture</h4>
+                            <p>Developing structural responses to changing climate matrices in low-lying ecosystems.</p>
                         </div>
-                    </li>
-                    <li>
-                        <div class="pub-row">
-                            <span class="badge-year">2025</span>
-                            <div class="pub-body">
-                                Ahmed, T., <strong>Your Name</strong>, and Das, S. "Machine learning implementations in wetland rice classification: A comparative overview." <em>Journal of Agricultural Automation</em>, 14(3), pp. 210–223.
-                            </div>
+                        <div class="research-node">
+                            <h4>Wetland Agronomy</h4>
+                            <p>Optimizing crop yields and tracking soil chemical profiles in seasonal haor regions.</p>
                         </div>
-                    </li>
-                </ul>
-            </section>
-
-            <!-- Current Projects -->
-            <section id="projects" class="card-module">
-                <h2 class="module-title">Research Projects</h2>
-                <div class="project-strip">
-                    <div class="strip-header">
-                        <h3>Haor Ecosystem Digitalization & Soil Mapping Framework</h3>
-                        <span class="status-pill active">Ongoing</span>
                     </div>
-                    <p class="strip-text">Investigating local soil profile alterations during dynamic micro-floods using decentralized sensor telemetry arrays across regional sectors.</p>
                 </div>
             </section>
+
+            <!-- Section: Publications -->
+            <section id="publications" class="stream-section">
+                <div class="section-header">
+                    <span class="section-num">03</span>
+                    <h2>Selected Publications</h2>
+                </div>
+                <div class="section-body">
+                    <div class="timeline-wrapper">
+                        
+                        <div class="timeline-block">
+                            <div class="timeline-meta">2026</div>
+                            <div class="timeline-content">
+                                <h5>Assessing Crop Vulnerability Indexes in North-Eastern Ecosystems</h5>
+                                <p class="authors"><strong>Your Name</strong>, Co-author, B.</p>
+                                <p class="journal"><em>Journal of Eco-Agricultural Engineering</em>, 29(1), pp. 45–60.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-block">
+                            <div class="timeline-meta">2025</div>
+                            <div class="timeline-content">
+                                <h5>Remote Sensing in Floodplain Classification Dynamics</h5>
+                                <p class="authors">Co-author, A., <strong>Your Name</strong>.</p>
+                                <p class="journal"><em>International Agricultural Review</em>, 12(3), pp. 88–94.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Projects -->
+            <section id="projects" class="stream-section">
+                <div class="section-header">
+                    <span class="section-num">04</span>
+                    <h2>Research Projects</h2>
+                </div>
+                <div class="section-body">
+                    <div class="project-box">
+                        <div class="box-badge">Active Grant</div>
+                        <h3>Decentralized Water Metrics in Agricultural Zones</h3>
+                        <p class="box-meta"><strong>Sponsor:</strong> University Grants Commission | <strong>Role:</strong> Project Director</p>
+                        <p class="box-desc">Deploying scalable hydrological modeling patterns targeting dry-season cultivation efficiency improvements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Embedded Mini Footer -->
+            <footer class="stream-footer">
+                <p>&copy; 2026 Sylhet Agricultural University. Hosted via GitHub Pages.</p>
+            </footer>
 
         </main>
     </div>
-
-    <footer class="bottom-branding">
-        <p>&copy; 2026 Sylhet Agricultural University. Created via GitHub Pages.</p>
-    </footer>
 
 </body>
 </html>
