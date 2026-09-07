@@ -52,7 +52,7 @@
             </div>
         </header>
 
-        <!-- Main Navigation Tab bar (Updated to 4 Tabs) -->
+        <!-- Main Navigation Tab bar -->
         <nav class="tab-bar">
             <button class="tab-btn active" onclick="switchTab(event, 'about-tab')">Biography</button>
             <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research Interests</button>
@@ -84,15 +84,34 @@
                 </div>
             </div>
 
-            <!-- Tab: Projects -->
+            <!-- Tab: Projects (Updated with Sub-sections) -->
             <div id="project-tab" class="tab-content">
                 <div class="project-matrix">
-                    <div class="project-detailed-card">
-                        <div class="project-status active">Active Grant</div>
-                        <h3>Automated Haor Basin Sensor Matrix Framework</h3>
-                        <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC)</p>
-                        <p class="project-desc">Developing low-impact wireless telemetry layouts to map wetland soil parameter shifts dynamically over changing seasonal deluge lines.</p>
+                    
+                    <!-- Sub-section: Ongoing Grants -->
+                    <div class="project-sub-section">
+                        <h2 class="sub-section-title"><i class="fa-solid fa-spinner text-ongoing"></i> Ongoing Grants</h2>
+                        
+                        <div class="project-detailed-card boundary-ongoing">
+                            <div class="project-status active">Active</div>
+                            <h3>Automated Haor Basin Sensor Matrix Framework</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC)</p>
+                            <p class="project-desc">Developing low-impact wireless telemetry layouts to map wetland soil parameter shifts dynamically over changing seasonal deluge lines.</p>
+                        </div>
                     </div>
+
+                    <!-- Sub-section: Completed Grants -->
+                    <div class="project-sub-section">
+                        <h2 class="sub-section-title"><i class="fa-solid fa-circle-check text-completed"></i> Completed Grants</h2>
+                        
+                        <div class="project-detailed-card boundary-completed">
+                            <div class="project-status completed">Closed</div>
+                            <h3>Micro-Climate Variations in Northeastern Agro-Ecological Zones</h3>
+                            <p class="project-meta"><strong>Role:</strong> Co-Investigator | <strong>Funding Body:</strong> Ministry of Science and Technology (MoST)</p>
+                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a two-year experimental framework.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
