@@ -154,20 +154,20 @@ body {
 
 .link-email:hover .link-icon { background-color: #ea4335; color: white; }
 .link-linkedin:hover .link-icon { background-color: #0077b5; color: white; }
-.link-scholar:hover .link-icon { background-color: #4285f4; color: white; }
+.link-scholar:hover .link-icon { background-color: #0000FF; color: white; }
 .link-github:hover .link-icon { background-color: #24292e; color: white; }
 
 
 /* Elegant Text Color Adjustments on Button Hover */
 .link-email:hover .link-text { color: #ea4335; }
 .link-linkedin:hover .link-text { color: #0077b5; }
-.link-scholar:hover .link-text { color: #4285f4; }
+.link-scholar:hover .link-text { color: #0000FF; }
 .link-github:hover .link-text { color: #24292e; }
 
 /* Subtly highlight the entire button border matching the brand on hover */
 .link-email:hover { border-color: #ea4335; }
 .link-linkedin:hover { border-color: #0077b5; }
-.link-scholar:hover { border-color: #4285f4; }
+.link-scholar:hover { border-color: #0000FF; }
 .link-github:hover { border-color: #24292e; }
 
 
