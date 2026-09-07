@@ -65,24 +65,28 @@ body {
     letter-spacing: -0.5px;
 }
 
+/* Locate this section in your style.css file */
 .cv-badge-btn {
-    background-color: var(--text-primary);
-    color: var(--surface);
+    background-color: #1b5e20; /* 1. CHANGE THIS: Permanent background color (e.g., Deep Institutional Green) */
+    color: var(--surface);     /* Text color (white) */
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 30px;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s; /* Added smooth movement */
     white-space: nowrap;
 }
 
+/* Update the hover state right below it */
 .cv-badge-btn:hover {
-    background-color: var(--accent);
+    background-color: #2e7d32; /* 2. CHANGE THIS: Color when you hover over it (e.g., Lighter Green) */
+    transform: translateY(-2px); /* Subtly pops up on hover */
 }
 
+
 .hub-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     font-weight: 400;
     margin-top: 4px;
