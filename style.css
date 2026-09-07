@@ -67,7 +67,7 @@ body {
 
 /* Locate this section in your style.css file */
 .cv-badge-btn {
-    background-color: white; /* 1. CHANGE THIS: Permanent background color (e.g., Deep Institutional Green) */
+    background-color: #800020; /* 1. CHANGE THIS: Permanent background color (e.g., Deep Institutional Green) */
     color: var(--surface);     /* Text color (white) */
     text-decoration: none;
     font-size: 0.85rem;
