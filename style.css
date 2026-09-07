@@ -82,6 +82,7 @@ body {
     color: #002d62;
     margin-bottom: 8px;
     font-weight: 700;
+    text-align: center; /* Centers the name */
 }
 
 .sidebar .title {
@@ -90,18 +91,20 @@ body {
     color: #444;
     margin-bottom: 4px;
     line-height: 1.3;
+    text-align: center; /* Centers the designation */
 }
 
 .sidebar .dept, .sidebar .inst {
     font-size: 0.85rem;
     color: #666;
     line-height: 1.4;
+     text-align: center; /* Centers the department and institution */
 }
 
 /* Modern Icon Badges Grid */
 .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     gap: 12px;
     margin: 20px 0;
