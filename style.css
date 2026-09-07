@@ -281,7 +281,7 @@ body {
 }
 
 .sub-section-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--text-primary);
     display: flex;
@@ -302,7 +302,7 @@ body {
 .boundary-completed { border-left: 4px solid #9ca3af; border-radius: 4px var(--radius) var(--radius) 4px; }
 
 .project-detailed-card h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 6px;
     padding-right: 90px;
 }
