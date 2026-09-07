@@ -67,7 +67,7 @@ body {
 
 /* Locate this section in your style.css file */
 .cv-badge-btn {
-    background-color: #87CEFA; /* 1. CHANGE THIS: Permanent background color (e.g., Deep Institutional Green) */
+    background-color:  #0077b5; /* 1. CHANGE THIS: Permanent background color (e.g., Deep Institutional Green) */
     color: var(--surface);     /* Text color (white) */
     text-decoration: none;
     font-size: 0.85rem;
@@ -80,7 +80,7 @@ body {
 
 /* Update the hover state right below it */
 .cv-badge-btn:hover {
-    background-color: #0077b5; /* 2. CHANGE THIS: Color when you hover over it (e.g., Lighter Green) */
+    background-color: #87CEFA; /* 2. CHANGE THIS: Color when you hover over it (e.g., Lighter Green) */
     transform: translateY(-2px); /* Subtly pops up on hover */
 }
 
