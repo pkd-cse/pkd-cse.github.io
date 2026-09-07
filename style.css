@@ -92,7 +92,7 @@ body {
 /* Social Icons Styling */
 .social-icons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 15px;
     margin: 15px 0 5px 0;
 }
