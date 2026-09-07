@@ -118,7 +118,7 @@ body {
     gap: 14px;
     margin: 20px 0;
     padding-left: 10px; /* Optional slight indent for alignment elegance */
-    text-align: center;
+    text-align: left;
 }
 
 .social-icons a {
@@ -136,7 +136,7 @@ body {
 .social-icons a i {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 34px;
     height: 34px;
     background: #f0f4f8;
