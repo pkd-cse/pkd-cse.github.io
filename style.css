@@ -51,125 +51,116 @@ body {
     gap: 40px;
 }
 
-/* Fixed Sidebar Styles */
+/* Modernized Sticky Sidebar Styles */
 .sidebar {
     flex: 1;
     max-width: 300px;
     background: #ffffff;
-    padding: 30px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    text-align: left;
+    padding: 30px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 45, 98, 0.08); /* Soft blue-tinted shadow */
+    text-align: center; /* Centered layout for a cleaner academic look */
     height: fit-content;
-    
+    position: sticky; /* Makes the sidebar scroll along with the page */
+    top: 30px;
+    border: 1px solid rgba(0, 45, 98, 0.05);
 }
 
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #002d62;
-    margin-bottom: 15px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
 .sidebar h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     color: #002d62;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-weight: 700;
 }
 
 .sidebar .title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    color: #555;
+    color: #444;
+    margin-bottom: 4px;
+    line-height: 1.3;
 }
 
 .sidebar .dept, .sidebar .inst {
     font-size: 0.85rem;
-    color: #777;
+    color: #666;
+    line-height: 1.4;
 }
 
-/* Social Icons Styling */
+/* Modern Icon Badges Grid */
 .social-icons {
     display: flex;
-    justify-content: left;
-    gap: 15px;
-    margin: 15px 0 5px 0;
-  
-    
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
 }
 
 .social-icons a {
-    color: #555; /* Default gray color */
-    font-size: 1.4rem;
-    transition: color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #f0f4f8;
+    border-radius: 50%;
+    color: #002d62;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
     text-decoration: none;
-      align-items: flex-start;
 }
 
-.social-icons a svg {
-    width: 100%;
-    height: 100%;
-    fill: #555; /* Default dark grey icon color */
-    transition: fill 0.3s;
-}
-
-/* Hover effects with brand specific colors */
+/* Hover effects with brand specific backgrounds */
 .social-icons a:hover {
-    transform: translateY(-3px); /* Subtle lift on hover */
+    transform: translateY(-3px);
+    color: #ffffff;
 }
 
-.social-icons a[title="LinkedIn"]:hover {
-    color: #0077b5; /* LinkedIn Blue */
-}
-
-.social-icons a[title="Google Scholar"]:hover {
-    color: #4285f4; /* Google Blue */
-}
-
-.social-icons a[title="GitHub"]:hover {
-    color: #24292e; /* GitHub Dark Gray */
-}
-
-.social-icons a[title="ORCID"]:hover {
-    color: #a6ce39; /* ORCID Green */
-}
-
+.social-icons a[title="LinkedIn"]:hover { background-color: #0077b5; }
+.social-icons a[title="Google Scholar"]:hover { background-color: #4285f4; }
+.social-icons a[title="GitHub"]:hover { background-color: #24292e; }
+.social-icons a[title="Email"]:hover { background-color: #ea4335; }
 
 .sidebar hr {
     margin: 20px 0;
     border: 0;
-    border-top: 1px solid #eee;
-}
-
-.contact-info {
-    text-align: left;
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-}
-
-.contact-info p {
-    margin-bottom: 10px;
+    border-top: 1px solid #eef2f5;
 }
 
 /* CV Download Button */
 .btn-cv {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background-color: #002d62;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    border-radius: 6px;
+    font-weight: 600;
     font-size: 0.9rem;
-    transition: background 0.3s;
+    transition: background 0.2s, transform 0.2s;
     width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 45, 98, 0.2);
 }
 
 .btn-cv:hover {
-    background-color: #004085;
+    background-color: #001f44;
+    transform: translateY(-1px);
 }
+
 
 /* Main Content Area Styles */
 .main-content {
