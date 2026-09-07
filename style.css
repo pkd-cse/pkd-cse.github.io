@@ -314,8 +314,8 @@ body {
 }
 
 .project-desc {
-    font-size: 0.95rem;
-    color: var(--text-primary);
+    font-size: 0.80rem;
+    color: var(--text-muted);
 }
 
 /* Badge Status Styles */
