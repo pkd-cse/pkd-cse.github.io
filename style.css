@@ -86,6 +86,14 @@ body {
     text-align: center; /* Centers the name */
 }
 
+.sidebar p {
+    font-size: 1.35rem;
+    color: #002d62;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-align: center; /* Centers the name */
+}
+
 .sidebar .title {
     font-size: 0.9rem;
     font-weight: 600;
