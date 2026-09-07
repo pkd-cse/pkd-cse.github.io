@@ -82,14 +82,14 @@ body {
 }
 
 .hub-subtitle {
-    font-size: 1rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 4px;
 }
 
 .hub-institution {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     margin-top: 4px;
 }
