@@ -229,6 +229,7 @@ body {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     padding: 30px;
+    color: var(--navy--blue);
 }
 
 .bio-card h3 {
