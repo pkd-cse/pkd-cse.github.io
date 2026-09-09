@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif, Helvetica;
     background-color: var(--bg-main);
     color: var(--text-primary);
     line-height: 1.6;
