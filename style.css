@@ -65,25 +65,22 @@ body {
     letter-spacing: -0.5px;
 }
 
-/* Locate this section in your style.css file */
 .cv-badge-btn {
-    background-color:  #0077b5; /* 1. CHANGE THIS: Permanent background color (e.g., Deep Institutional Green) */
-    color: var(--surface);     /* Text color (white) */
+    background-color:  #0077b5; 
+    color: var(--surface);     
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 30px;
-    transition: background 0.2s, transform 0.2s; /* Added smooth movement */
+    transition: background 0.2s, transform 0.2s; 
     white-space: nowrap;
 }
 
-/* Update the hover state right below it */
 .cv-badge-btn:hover {
-    background-color: #0000FF; /* 2. CHANGE THIS: Color when you hover over it (e.g., Lighter Green) */
-    transform: translateY(-2px); /* Subtly pops up on hover */
+    background-color: #0000FF; 
+    transform: translateY(-2px); 
 }
-
 
 .hub-subtitle {
     font-size: 0.8rem;
@@ -141,7 +138,6 @@ body {
     transition: color 0.2s ease;
 }
 
-/* Individual Brand Accent Focus on Hover */
 .iconic-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -157,20 +153,15 @@ body {
 .link-scholar:hover .link-icon { background-color: #0000FF; color: white; }
 .link-github:hover .link-icon { background-color: #24292e; color: white; }
 
-
-/* Elegant Text Color Adjustments on Button Hover */
 .link-email:hover .link-text { color: #ea4335; }
 .link-linkedin:hover .link-text { color: #0077b5; }
 .link-scholar:hover .link-text { color: #0000FF; }
 .link-github:hover .link-text { color: #24292e; }
 
-/* Subtly highlight the entire button border matching the brand on hover */
 .link-email:hover { border-color: #ea4335; }
 .link-linkedin:hover { border-color: #0077b5; }
 .link-scholar:hover { border-color: #0000FF; }
 .link-github:hover { border-color: #24292e; }
-
-
 
 /* Horizontal Segmented Tabs */
 .tab-bar {
@@ -268,7 +259,7 @@ body {
     left: 0;
 }
 
-/* Projects Tab Layout & Sub-sections */
+/* Projects Tab Layout */
 .project-matrix {
     display: flex;
     flex-direction: column;
@@ -298,7 +289,6 @@ body {
     position: relative;
 }
 
-/* Left structural accent bars for status differentiation */
 .boundary-ongoing { border-left: 4px solid #16a34a; border-radius: 4px var(--radius) var(--radius) 4px; }
 .boundary-completed { border-left: 4px solid #9ca3af; border-radius: 4px var(--radius) var(--radius) 4px; }
 
@@ -319,7 +309,6 @@ body {
     color: var(--text-muted);
 }
 
-/* Badge Status Styles */
 .project-status {
     position: absolute;
     top: 30px;
@@ -372,7 +361,7 @@ body {
     color: var(--text-muted);
 }
 
-/* Global Footer elements */
+/* Global Footer */
 .portal-footer {
     text-align: center;
     margin-top: 50px;
@@ -419,10 +408,8 @@ body {
     }
 }
 
-
-
 /* ==========================================================================
-   Leisure Tab Grid & Cards Layout
+   ADDED NEW: Leisure Tab Grid & Responsive Image Cards
    ========================================================================== */
 .leisure-grid {
     display: grid;
@@ -484,4 +471,3 @@ body {
     color: var(--text-muted);
     line-height: 1.4;
 }
-
