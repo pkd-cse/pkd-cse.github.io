@@ -241,44 +241,58 @@
 
     
     <script>
-        function openTab(evt, tabName) {
-    // ১. সবকটি ট্যাব কন্টেন্ট (tab-content) প্রথমে হাইড বা লুকিয়ে ফেলুন
+      <script>
+// ১. ট্যাব পরিবর্তনের মূল ইঞ্জিন (আপনার সব ট্যাবের জন্য)
+function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
+    
+    // সব ট্যাব কন্টেন্ট প্রথমে হাইড করুন
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
         tabcontent[i].classList.remove("active");
     }
-
-    // ২. সবকটি ট্যাব বাটনের অ্যাক্টিভ (active) ক্লাসটি রিমুভ করুন
+    
+    // সব বাটনের অ্যাক্টিভ স্ট্যাটাস মুছে দিন
     tablinks = document.getElementsByClassName("tab-btn");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
-
-    // ৩. নির্দিষ্ট যে ট্যাবে ক্লিক করা হয়েছে সেটির কন্টেন্ট দেখান এবং বাটনে active ক্লাস যোগ করুন
+    
+    // যে ট্যাবে ক্লিক করা হয়েছে সেটি দেখান
     var currentTab = document.getElementById(tabName);
     if (currentTab) {
         currentTab.style.display = "block";
-        // CSS fadeIn অ্যানিমেশনটি সক্রিয় করার জন্য একটি মাইক্রো-ডিলে দেওয়া হয়েছে
         setTimeout(function() {
             currentTab.classList.add("active");
         }, 10);
     }
     
-    evt.currentTarget.classList.add("active");
-
+    // ক্লিক করা বাটনটিকে অ্যাক্টিভ করুন
+    if (evt && evt.currentTarget) {
+        evt.currentTarget.classList.add("active");
+    }
 }
 
-        
-            function openLightbox(element) {
-    document.getElementById("imageLightbox").style.display = "flex";
-    document.getElementById("lightboxImg").src = element.src;
+// ২. ছবি বড় করে দেখার লাইটবক্স ফাংশন (openTab এর বাইরে আলাদাভাবে)
+function openLightbox(element) {
+    var lightbox = document.getElementById("imageLightbox");
+    var lightboxImg = document.getElementById("lightboxImg");
+    
+    if (lightbox && lightboxImg) {
+        lightbox.style.display = "flex";
+        lightboxImg.src = element.src;
+    }
 }
 
 function closeLightbox() {
-    document.getElementById("imageLightbox").style.display = "none";
+    var lightbox = document.getElementById("imageLightbox");
+    if (lightbox) {
+        lightbox.style.display = "none";
+    }
 }
+</script>
+
 
     </script>
 
