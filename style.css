@@ -384,7 +384,10 @@ body {
    আল্ট্রা-ক্লিন অ্যাকাডেমিক লেজার ডিজাইন (Matches Project Cards)
    ========================================================================== */
 
-/* পুরো সেকশনের লিস্ট কন্টেইনার */
+/* ==========================================================================
+   মাল্টিপল ইমেজ সাপোর্ট সহ অ্যাকাডেমিক লেজার ডিজাইন 
+   ========================================================================== */
+
 .leisure-clean-list {
     display: flex;
     flex-direction: column;
@@ -392,19 +395,15 @@ body {
     margin-top: 25px;
 }
 
-/* প্রজেক্ট কার্ডের মতো হুবহু ব্যাকগ্রাউন্ড ও বর্ডার স্টাইল */
 .leisure-row-card {
-    display: flex;
-    gap: 25px;
     background-color: var(--surface);
     border: 1px solid var(--border);
-    padding: 20px;
-    align-items: center;
+    padding: 25px;
     position: relative;
     transition: transform 0.2s ease;
 }
 
-/* আপনার প্রজেক্টের মতোই বাম পাশে একটি সুন্দর নীল প্রফেশনাল বর্ডার লাইন */
+/* প্রজেক্ট কার্ডের মতো প্রফেশনাল লেফট বর্ডার */
 .boundary-leisure { 
     border-left: 4px solid var(--accent); 
     border-radius: 4px var(--radius) var(--radius) 4px; 
@@ -414,28 +413,10 @@ body {
     transform: translateY(-2px);
 }
 
-/* ছবি রাখার মিনিমাল ফ্রেম */
-.leisure-row-img-wrapper {
-    width: 110px;
-    height: 110px;
-    flex-shrink: 0;
-    border-radius: calc(var(--radius) - 6px);
-    overflow: hidden;
-    border: 1px solid var(--border);
-}
-
-.leisure-row-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* টেক্সট এরিয়া */
 .leisure-row-details {
-    flex: 1;
+    width: 100%;
 }
 
-/* টাইটেল স্টাইল (আপনার প্রজেক্ট টাইটেলের মতো সাইজ) */
 .leisure-row-details h4 {
     font-size: 0.95rem;
     font-weight: 700;
@@ -443,26 +424,52 @@ body {
     margin-bottom: 6px;
 }
 
-/* বিবরণ স্টাইল */
 .leisure-row-desc {
     font-size: 0.82rem;
     color: var(--text-muted);
     line-height: 1.5;
+    margin-bottom: 18px; /* টেক্সট থেকে ছবির দূরত্বের জন্য */
 }
 
-/* মোবাইল রেসপন্সিভ ওভাররাইড (মোবাইলে ছবি উপরে এবং টেক্সট নিচে চলে যাবে) */
-@media(max-width: 600px) {
-    .leisure-row-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-        padding: 20px;
+/* একাধিক ছবি পাশাপাশি সাজানোর স্ট্রিপ কন্টেইনার */
+.leisure-image-strip {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap; /* ছবি বেশি হলে স্বয়ংক্রিয়ভাবে নিচে নেমে আসবে */
+}
+
+/* প্রতিটি ছবির মিনিমাল ফ্রেম */
+.strip-img-wrapper {
+    width: 140px; /* ছবিগুলোর নির্দিষ্ট চওড়া সাইজ */
+    height: 95px;  /* ছবিগুলোর নির্দিষ্ট উচ্চতা সাইজ */
+    border-radius: calc(var(--radius) - 8px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background-color: var(--bg-main);
+    transition: transform 0.2s ease;
+}
+
+.strip-img-wrapper:hover {
+    transform: scale(1.03); /* ছবি সামান্য জুম হবে হোভার করলে */
+}
+
+.strip-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ছবি যেন ফেটে বা চ্যাপ্টা না হয়ে যায় */
+}
+
+/* মোবাইল ডিভাইসের জন্য স্পেশাল রেসপন্সিভ এডজাস্টমেন্ট */
+@media(max-width: 500px) {
+    .leisure-image-strip {
+        gap: 8px;
     }
-    .leisure-row-img-wrapper {
-        width: 100%;
-        height: 150px;
+    .strip-img-wrapper {
+        flex: 1 1 calc(50% - 8px); /* মোবাইলে ছবিগুলো সমান ২ কলামে ভাগ হয়ে যাবে */
+        height: 110px;
     }
 }
+
 
 
 
