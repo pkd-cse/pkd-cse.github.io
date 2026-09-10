@@ -418,3 +418,70 @@ body {
         margin-bottom: 10px;
     }
 }
+
+
+
+/* ==========================================================================
+   Leisure Tab Grid & Cards Layout
+   ========================================================================== */
+.leisure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.leisure-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) - 4px);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.leisure-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+}
+
+.leisure-img-wrapper {
+    width: 100%;
+    height: 160px;
+    background-color: var(--bg-main);
+    overflow: hidden;
+}
+
+.leisure-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.leisure-card:hover .leisure-img {
+    transform: scale(1.05);
+}
+
+.leisure-caption {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.leisure-caption h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.leisure-caption p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
