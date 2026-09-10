@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranajit Kumar Das | CSE | SAU</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="portal-wrapper">
+        
+        <!-- Top Profile Hub Header -->
+        <header class="profile-hub">
+            <div class="hub-avatar-area">
+                <img src="profile.jpg" alt="Faculty Picture" class="hub-avatar">
+            </div>
+            
+            <div class="hub-info-area">
+                <div class="title-row">
+                    <h1>Pranajit Kumar Das</h1>
+                    <a href="cv.pdf" download class="cv-badge-btn">
+                        <i class="fa-solid fa-file-pdf"></i> Curriculum Vitae
+                    </a>
+                </div>
+                <p class="hub-subtitle">Faculty Member (Teaching) </p>
+                 <p class="hub-institution"><i class="fa-solid fa-location-dot icon-fw"></i> Department of Computer Science and Engineering</p> 
+                <p class="hub-institution"><i class="fa-solid fa-building-columns"></i> Sylhet Agricultural University, Bangladesh</p>
+                
+                <!-- Modern Iconic Text Link Matrix -->
+                <div class="iconic-links-row">
+                    <a href="mailto:your.email@sau.ac.bd" class="iconic-link link-email">
+                        <span class="link-icon"><i class="fa-solid fa-envelope"></i></span>
+                        <span class="link-text">Email</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="iconic-link link-linkedin">
+                        <span class="link-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+                        <span class="link-text">LinkedIn</span>
+                    </a>
+                    <a href="https://google.com" target="_blank" class="iconic-link link-scholar">
+                        <span class="link-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                        <span class="link-text">Google Scholar</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="iconic-link link-github">
+                        <span class="link-icon"><i class="fa-brands fa-github"></i></span>
+                        <span class="link-text">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Navigation Tab bar -->
+        <nav class="tab-bar">
+            <button class="tab-btn active" onclick="switchTab(event, 'about-tab')">Biography</button>
+            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Education</button>
+            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research Interests</button> 
+            <button class="tab-btn" onclick="switchTab(event, 'project-tab')">Projects</button>
+            <button class="tab-btn" onclick="switchTab(event, 'pub-tab')">Publications</button>
+        </nav>
+
+        <!-- Tabbed Content Section -->
+        <main class="tab-window">
+            
+            <!-- Tab: Biography -->
+            <div id="about-tab" class="tab-content active">
+                <div class="bio-card">
+                    <h3>About Me</h3>
+                    <p>Welcome to my academic portal. I serve as a dedicated faculty member at Sylhet Agricultural University. My instructional duties and empirical studies focus closely on pioneering environmental dynamics, regional crop optimizations, and technical agricultural transformations throughout Bangladesh.</p>
+                </div>
+            </div>
+
+            
+
+            <!-- Tab: Research Interests -->
+            <div id="research-tab" class="tab-content">
+                <div class="bio-card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Educational Background</h3>
+                    <p class="tab-intro-text">My academic investigation explores sustainable paradigms and field deployments targeting ecological resilience:</p>
+                    <ul class="styled-list">
+                        <li>Climate-Resilient Smart Agriculture & Cultivation Frameworks</li>
+                        <li>Wetland Hydrology & Crop Management in North-Eastern Ecosystems</li>
+                        <li>Decentralized IoT Data Arrays and Automation in Precision Farming</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Tab: Projects (Updated with Sub-sections) -->
+            <div id="project-tab" class="tab-content">
+                <div class="project-matrix">
+                    
+                    <!-- Sub-section: Ongoing Grants -->
+                    <div class="project-sub-section">
+                        <h2 class="sub-section-title"><i class="fa-solid fa-spinner text-ongoing"></i> Ongoing Projects</h2>
+                        
+                        <div class="project-detailed-card boundary-ongoing">
+                            <div class="project-status active">Ongoing</div>
+                            <h3>Explainable AI and Data-Driven Assessment of Climate Change Effects on Yield Production in Bangladesh: A Blending Approach of Remote Sensing and Machine Learning</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC) of Bangladesh  | <strong>FY:</strong> 2025-26</p>
+                            <p class="project-desc">This study adopts an integrated remote sensing and machine learning framework to assess the impacts of climate change on rice yield production in Bangladesh over a 30-year period. </p>
+                        </div>
+                    </div>
+
+                    <!-- Sub-section: Completed Grants -->
+                    <div class="project-sub-section">
+                        <h2 class="sub-section-title"><i class="fa-solid fa-circle-check text-completed"></i> Completed Projects</h2>
+                        
+                        <div class="project-detailed-card boundary-completed">
+                           <!--  <div class="project-status completed">Completed</div> -->
+                            <h3>Implementation of real-time water quality monitoring and control system for precision aquaculture: Intelligent IoT and machine learning based approaches toward 4th agricultural revolution</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> Ministry of Science and Technology (MoST) of Bangladesh| <strong>FY:</strong> 2024-25</p>
+                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a year experimental framework.</p>
+                        </div>
+
+
+                         <div class="project-detailed-card boundary-completed">
+                           <!-- <div class="project-status completed">Completed</div>  -->
+                            <h3>BD-Freshwater-Fish: A Large-scale Digital Database of Freshwater Fish from Bangladesh for AI based Automatic Fish Species Identification and Detection</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC) of Bangladesh | <strong>FY:</strong> 2023-24</p>
+                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a two-year experimental framework.</p>
+                        </div>
+
+
+                        <div class="project-detailed-card boundary-completed">
+                          <!--  <div class="project-status completed">Completed</div>  -->
+                            <h3>Design and Development of a mobile application for SAU on the android platform</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong>  University Grants Commission (UGC) of Bangladesh | <strong>FY:</strong> 2017-18</p>
+                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a two-year experimental framework.</p>
+                        </div>
+                        
+                        
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tab: Publications -->
+            <div id="pub-tab" class="tab-content">
+                <div class="pub-matrix">
+                    <div class="pub-card">
+                        <div class="pub-index-num">01</div>
+                        <div class="pub-details">
+                            <h5>"Advancements in Flood-Resilient Crop Yields in Sylhet Division"</h5>
+                            <p class="authors"><strong>Your Name</strong>, Co-author, B.</p>
+                            <p class="journal"><em>Journal of Agricultural Science</em>, 2026.</p>
+                        </div>
+                    </div>
+                    <div class="pub-card">
+                        <div class="pub-index-num">02</div>
+                        <div class="pub-details">
+                            <h5>"Evaluating Local Soil Microclimates Using Automated Sensor Arrays"</h5>
+                            <p class="authors">Co-author, A., <strong>Your Name</strong>.</p>
+                            <p class="journal"><em>International Agronomy Review</em>, 2025.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="portal-footer">
+            <p>&copy; 2026 Sylhet Agricultural University &bull; Built via GitHub Pages</p>
+        </footer>
+
+    </div>
+
+    <!-- Clean Tab Switching Script -->
+    <script>
+        function switchTab(evt, tabId) {
+            let tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            let tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+            document.getElementById(tabId).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
