@@ -60,7 +60,7 @@
             <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research Interests</button> 
             <button class="tab-btn" onclick="switchTab(event, 'project-tab')">Projects</button>
             <button class="tab-btn" onclick="switchTab(event, 'pub-tab')">Publications</button>
-            <button class="tab-btn" onclick="switchTab(event, 'leisure')">Leisure Activity</button>
+            <button class="tab-btn" onclick="openTab(event, 'leisure')">Leisure Activity</button>
         </nav>
 
         <!-- Tabbed Content Section -->
@@ -242,24 +242,28 @@
     
     <script>
 
-// ১. আপনার পোর্টালের মূল ট্যাব ফাংশন (নাম পরিবর্তন করে switchTab করা হলো)
-function switchTab(evt, tabName) {
+// --- আপনার আগের অরিজিনাল কোড নিচে অপরিবর্তিত থাকবে ---
+// (এখানে আপনার পুরনো switchTab ফাংশনটি যেভাবে ছিল সেভাবেই রেখে দিন)
+
+// --- শুধুমাত্র নিচের এই নতুন কোডটুকু আপনার স্ক্রিপ্টের শেষে যোগ করুন ---
+
+function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     
-    // সব ট্যাব কন্টেন্ট প্রথমে লুকিয়ে ফেলুন
+    // ১. আপনার পোর্টালের সব ট্যাব কন্টেন্ট হাইড করার নিয়ম
     tabcontent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
         tabcontent[i].classList.remove("active");
     }
     
-    // সব বাটনের অ্যাক্টিভ মোড রিমুভ করুন
+    // ২. সব বাটনের অ্যাক্টিভ ক্লাস রিমুভ করার নিয়ম
     tablinks = document.getElementsByClassName("tab-btn");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].classList.remove("active");
     }
     
-    // ক্লিক করা নির্দিষ্ট ট্যাবটি দেখান
+    // ৩. লেজার ট্যাবটি ওপেন করার নিয়ম
     var currentTab = document.getElementById(tabName);
     if (currentTab) {
         currentTab.style.display = "block";
@@ -268,17 +272,15 @@ function switchTab(evt, tabName) {
         }, 10);
     }
     
-    // বাটনটিকে অ্যাক্টিভ হিসেবে চিহ্নিত করুন
     if (evt && evt.currentTarget) {
         evt.currentTarget.classList.add("active");
     }
 }
 
-// ২. ছবি বড় করার লাইটবক্স ফাংশন (আলাদাভাবে থাকবে)
+// ৪. ছবির লাইটবক্স ফাংশন
 function openLightbox(element) {
     var lightbox = document.getElementById("imageLightbox");
     var lightboxImg = document.getElementById("lightboxImg");
-    
     if (lightbox && lightboxImg) {
         lightbox.style.display = "flex";
         lightboxImg.src = element.src;
@@ -291,6 +293,7 @@ function closeLightbox() {
         lightbox.style.display = "none";
     }
 }
+
 </script>
 
     <!-- ছবি বড় করে দেখার জন্য লাইটবক্স উইন্ডো -->
