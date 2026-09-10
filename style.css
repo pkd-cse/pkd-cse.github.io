@@ -80,7 +80,7 @@ body {
 
 /* Update the hover state right below it */
 .cv-badge-btn:hover {
-    background-color: #87CEFA; /* 2. CHANGE THIS: Color when you hover over it (e.g., Lighter Green) */
+    background-color: #0000FF; /* 2. CHANGE THIS: Color when you hover over it (e.g., Lighter Green) */
     transform: translateY(-2px); /* Subtly pops up on hover */
 }
 
