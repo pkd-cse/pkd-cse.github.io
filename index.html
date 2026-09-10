@@ -14,38 +14,34 @@
 
     <div class="portal-wrapper">
         
-        <!-- Top Profile Hub Header -->
+        <!-- Header Hub Container -->
         <header class="profile-hub">
-            <div class="hub-avatar-area">
-                <img src="profile.jpg" alt="Faculty Picture" class="hub-avatar">
-            </div>
-            
+            <img src="images/faculty.jpg" alt="Pranajit Kumar Das" class="hub-avatar">
             <div class="hub-info-area">
                 <div class="title-row">
                     <h1>Pranajit Kumar Das</h1>
-                    <a href="cv.pdf" download class="cv-badge-btn">
-                        <i class="fa-solid fa-file-pdf"></i> Curriculum Vitae
-                    </a>
+                    <a href="#" class="cv-badge-btn" target="_blank">Curriculum Vitae</a>
                 </div>
-                <p class="hub-subtitle">Faculty Member (Teaching) </p>
-                 <p class="hub-institution"><i class="fa-solid fa-location-dot icon-fw"></i> Department of Computer Science and Engineering</p> 
-                <p class="hub-institution"><i class="fa-solid fa-building-columns"></i> Sylhet Agricultural University, Bangladesh</p>
+                <p class="hub-subtitle">Faculty Member (Teaching)</p>
+                <p class="hub-institution">
+                    <i class="fa-solid fa-graduation-cap"></i> Department of Computer Science and Engineering, Sylhet Agricultural University, Bangladesh
+                </p>
                 
                 <!-- Modern Iconic Text Link Matrix -->
                 <div class="iconic-links-row">
-                    <a href="mailto:your.email@sau.ac.bd" class="iconic-link link-email">
+                    <a href="mailto:email@sau.ac.bd" class="iconic-link link-email">
                         <span class="link-icon"><i class="fa-solid fa-envelope"></i></span>
                         <span class="link-text">Email</span>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" class="iconic-link link-linkedin">
+                    <a href="#" class="iconic-link link-linkedin" target="_blank">
                         <span class="link-icon"><i class="fa-brands fa-linkedin-in"></i></span>
                         <span class="link-text">LinkedIn</span>
                     </a>
-                    <a href="https://google.com" target="_blank" class="iconic-link link-scholar">
+                    <a href="#" class="iconic-link link-scholar" target="_blank">
                         <span class="link-icon"><i class="fa-solid fa-graduation-cap"></i></span>
                         <span class="link-text">Google Scholar</span>
                     </a>
-                    <a href="https://github.com" target="_blank" class="iconic-link link-github">
+                    <a href="#" class="iconic-link link-github" target="_blank">
                         <span class="link-icon"><i class="fa-brands fa-github"></i></span>
                         <span class="link-text">GitHub</span>
                     </a>
@@ -53,34 +49,24 @@
             </div>
         </header>
 
-        <!-- Main Navigation Tab bar -->
+        <!-- Horizontal Segmented Tabs -->
         <nav class="tab-bar">
-            <button class="tab-btn active" onclick="switchTab(event, 'about-tab')">Biography</button>
-            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Education</button>
-            <button class="tab-btn" onclick="switchTab(event, 'research-tab')">Research Interests</button> 
-            <button class="tab-btn" onclick="switchTab(event, 'project-tab')">Projects</button>
-            <button class="tab-btn" onclick="switchTab(event, 'pub-tab')">Publications</button>
-            <button class="tab-btn" onclick="openTab(event, 'leisure')">Leisure Activity</button>
-
+            <button class="tab-btn active" onclick="openTab(event, 'biography')">Biography</button>
+            <button class="tab-btn" onclick="openTab(event, 'projects')">Projects</button>
+            <button class="tab-btn" onclick="openTab(event, 'publications')">Publications</button>
+            <button class="tab-btn" onclick="openTab(event, 'leisure')">Leisure</button>
         </nav>
 
-        <!-- Tabbed Content Section -->
+        <!-- Tab Display Engine -->
         <main class="tab-window">
             
-            <!-- Tab: Biography -->
-            <div id="about-tab" class="tab-content active">
+            <!-- Biography Tab -->
+            <div id="biography" class="tab-content active">
                 <div class="bio-card">
                     <h3>About Me</h3>
-                    <p>Welcome to my academic portal. I serve as a dedicated faculty member at Sylhet Agricultural University. My instructional duties and empirical studies focus closely on pioneering environmental dynamics, regional crop optimizations, and technical agricultural transformations throughout Bangladesh.</p>
-                </div>
-            </div>
-
-            
-
-            <!-- Tab: Research Interests -->
-            <div id="research-tab" class="tab-content">
-                <div class="bio-card">
-                    <h3><i class="fa-solid fa-graduation-cap"></i> Educational Background</h3>
+                    <p class="tab-intro-text">Welcome to my academic portal. I serve as a dedicated faculty member at Sylhet Agricultural University. My instructional duties and empirical studies focus closely on pioneering environmental dynamics, regional crop optimizations, and technical agricultural transformations throughout Bangladesh.</p>
+                    
+                    <h3>Educational Background</h3>
                     <p class="tab-intro-text">My academic investigation explores sustainable paradigms and field deployments targeting ecological resilience:</p>
                     <ul class="styled-list">
                         <li>Climate-Resilient Smart Agriculture & Cultivation Frameworks</li>
@@ -90,149 +76,88 @@
                 </div>
             </div>
 
-            <!-- Tab: Projects (Updated with Sub-sections) -->
-            <div id="project-tab" class="tab-content">
+            <!-- Projects Tab -->
+            <div id="projects" class="tab-content">
                 <div class="project-matrix">
-                    
-                    <!-- Sub-section: Ongoing Grants -->
+                    <!-- Ongoing Projects -->
                     <div class="project-sub-section">
-                        <h2 class="sub-section-title"><i class="fa-solid fa-spinner text-ongoing"></i> Ongoing Projects</h2>
-                        
+                        <div class="sub-section-title text-ongoing">
+                            <i class="fa-solid fa-circle-dot"></i> Ongoing Projects
+                        </div>
                         <div class="project-detailed-card boundary-ongoing">
-                            <div class="project-status active">Ongoing</div>
+                            <span class="project-status active">Ongoing</span>
                             <h3>Explainable AI and Data-Driven Assessment of Climate Change Effects on Yield Production in Bangladesh: A Blending Approach of Remote Sensing and Machine Learning</h3>
-                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC) of Bangladesh  | <strong>FY:</strong> 2025-26</p>
-                            <p class="project-desc">This study adopts an integrated remote sensing and machine learning framework to assess the impacts of climate change on rice yield production in Bangladesh over a 30-year period. </p>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding:</strong> UGC | <strong>FY:</strong> 2025-26</p>
+                            <p class="project-desc">This study adopts an integrated remote sensing and machine learning framework to assess the impacts of climate change on rice yield production in Bangladesh over a 30-year period.</p>
                         </div>
                     </div>
 
-                    <!-- Sub-section: Completed Grants -->
+                    <!-- Completed Projects -->
                     <div class="project-sub-section">
-                        <h2 class="sub-section-title"><i class="fa-solid fa-circle-check text-completed"></i> Completed Projects</h2>
-                        
-                        <div class="project-detailed-card boundary-completed">
-                           <!--  <div class="project-status completed">Completed</div> -->
-                            <h3>Implementation of real-time water quality monitoring and control system for precision aquaculture: Intelligent IoT and machine learning based approaches toward 4th agricultural revolution</h3>
-                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> Ministry of Science and Technology (MoST) of Bangladesh| <strong>FY:</strong> 2024-25</p>
-                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a year experimental framework.</p>
+                        <div class="sub-section-title text-completed">
+                            <i class="fa-solid fa-circle-check"></i> Completed Projects
                         </div>
-
-
-                         <div class="project-detailed-card boundary-completed">
-                           <!-- <div class="project-status completed">Completed</div>  -->
-                            <h3>BD-Freshwater-Fish: A Large-scale Digital Database of Freshwater Fish from Bangladesh for AI based Automatic Fish Species Identification and Detection</h3>
-                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong> University Grants Commission (UGC) of Bangladesh | <strong>FY:</strong> 2023-24</p>
+                        <div class="project-detailed-card boundary-completed">
+                            <span class="project-status completed">Completed</span>
+                            <h3>Implementation of real-time water quality monitoring and control system for precision aquaculture</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding:</strong> MoST | <strong>FY:</strong> 2024-25</p>
+                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a one-year experimental framework.</p>
+                        </div>
+                        <div class="project-detailed-card boundary-completed">
+                            <span class="project-status completed">Completed</span>
+                            <h3>BD-Freshwater-Fish: A Large-scale Digital Database of Freshwater Fish from Bangladesh</h3>
+                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding:</strong> UGC | <strong>FY:</strong> 2023-24</p>
                             <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a two-year experimental framework.</p>
                         </div>
-
-
-                        <div class="project-detailed-card boundary-completed">
-                          <!--  <div class="project-status completed">Completed</div>  -->
-                            <h3>Design and Development of a mobile application for SAU on the android platform</h3>
-                            <p class="project-meta"><strong>Role:</strong> Principal Investigator | <strong>Funding Body:</strong>  University Grants Commission (UGC) of Bangladesh | <strong>FY:</strong> 2017-18</p>
-                            <p class="project-desc">Evaluated automated sensor array data across diverse farming locations to map local microclimatic trends and crop vulnerabilities over a two-year experimental framework.</p>
-                        </div>
-                        
-                        
                     </div>
-
                 </div>
             </div>
 
-            <!-- Tab: Publications -->
-            <div id="pub-tab" class="tab-content">
+            <!-- Publications Tab -->
+            <div id="publications" class="tab-content">
                 <div class="pub-matrix">
                     <div class="pub-card">
-                        <div class="pub-index-num">01</div>
+                        <span class="pub-index-num">01</span>
                         <div class="pub-details">
                             <h5>"Advancements in Flood-Resilient Crop Yields in Sylhet Division"</h5>
-                            <p class="authors"><strong>Your Name</strong>, Co-author, B.</p>
+                            <p class="authors"><strong>Pranajit Kumar Das</strong>, Co-author, B.</p>
                             <p class="journal"><em>Journal of Agricultural Science</em>, 2026.</p>
                         </div>
                     </div>
                     <div class="pub-card">
-                        <div class="pub-index-num">02</div>
+                        <span class="pub-index-num">02</span>
                         <div class="pub-details">
                             <h5>"Evaluating Local Soil Microclimates Using Automated Sensor Arrays"</h5>
-                            <p class="authors">Co-author, A., <strong>Your Name</strong>.</p>
+                            <p class="authors">Co-author, A., <strong>Pranajit Kumar Das</strong>.</p>
                             <p class="journal"><em>International Agronomy Review</em>, 2025.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Leisure Tab (NEW) -->
+            <div id="leisure" class="tab-content">
+                <div class="bio-card">
+                    <h3>Leisure & Interests</h3>
+                    <p class="tab-intro-text">A glimpse into what keeps me inspired outside of instructional duties and empirical studies.</p>
+                    
+                    <div class="leisure-grid">
+                        <div class="leisure-card">
+                            <div class="leisure-img-wrapper">
+                                <img src="images/photography.jpg" alt="Landscape Photography" class="leisure-img">
+                            </div>
+                            <div class="leisure-caption">
+                                <h4>Landscape Photography</h4>
+                                <p>Capturing the vibrant wetlands and natural ecological shifts across the Sylhet region.</p>
+                            </div>
+                        </div>
 
-         <!-- Inside <div class="tab-window"> -->
-<div id="leisure" class="tab-content">
-    <div class="bio-card">
-        <h3>Leisure & Interests</h3>
-        <p class="tab-intro-text">A glimpse into what keeps me inspired outside of instructional duties and empirical studies.</p>
-        
-        <!-- Responsive Grid for Activities -->
-        <div class="leisure-grid">
-            
-            <!-- Activity Item 1 -->
-            <div class="leisure-card">
-                <div class="leisure-img-wrapper">
-                    <img src="images/photography.jpg" alt="Photography activity" class="leisure-img">
-                </div>
-                <div class="leisure-caption">
-                    <h4>Landscape Photography</h4>
-                    <p>Capturing the vibrant wetlands and natural ecological shifts across the Sylhet region.</p>
-                </div>
-            </div>
-
-            <!-- Activity Item 2 -->
-            <div class="leisure-card">
-                <div class="leisure-img-wrapper">
-                    <img src="images/gardening.jpg" alt="Gardening activity" class="leisure-img">
-                </div>
-                <div class="leisure-caption">
-                    <h4>Urban Gardening</h4>
-                    <p>Experimenting with small-scale botanical setups and tracking micro-environments at home.</p>
-                </div>
-            </div>
-
-            <!-- Activity Item 3 -->
-            <div class="leisure-card">
-                <div class="leisure-img-wrapper">
-                    <img src="images/reading.jpg" alt="Reading activity" class="leisure-img">
-                </div>
-                <div class="leisure-caption">
-                    <h4>Reading & Tech Blogging</h4>
-                    <p>Exploring conceptual literature on historical transformations and digital open-source tools.</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-            
-
-        </main>
-
-        <footer class="portal-footer">
-            <p>&copy; 2026 Sylhet Agricultural University &bull; Built via GitHub Pages</p>
-        </footer>
-
-    </div>
-
-    <!-- Clean Tab Switching Script -->
-    <script>
-        function switchTab(evt, tabId) {
-            let tabContents = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove("active");
-            }
-            let tabBtns = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < tabBtns.length; i++) {
-                tabBtns[i].classList.remove("active");
-            }
-            document.getElementById(tabId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
-    </script>
-
-</body>
-</html>
+                        <div class="leisure-card">
+                            <div class="leisure-img-wrapper">
+                                <img src="images/gardening.jpg" alt="Urban Gardening" class="leisure-img">
+                            </div>
+                            <div class="leisure-caption">
+                                <h4>Urban Gardening</h4>
+                                <p>Experimenting with small-scale botanical setups and tracking micro-environments at home.</p>
+                            </div>
+                        </div>
