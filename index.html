@@ -210,19 +210,38 @@
     </div>
 
     <!-- Clean Tab Switching Script -->
+
+
+    
     <script>
-        function switchTab(evt, tabId) {
-            let tabContents = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.remove("active");
-            }
-            let tabBtns = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < tabBtns.length; i++) {
-                tabBtns[i].classList.remove("active");
-            }
-            document.getElementById(tabId).classList.add("active");
-            evt.currentTarget.classList.add("active");
-        }
+        function openTab(evt, tabName) {
+    // ১. সবকটি ট্যাব কন্টেন্ট (tab-content) প্রথমে হাইড বা লুকিয়ে ফেলুন
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        tabcontent[i].classList.remove("active");
+    }
+
+    // ২. সবকটি ট্যাব বাটনের অ্যাক্টিভ (active) ক্লাসটি রিমুভ করুন
+    tablinks = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // ৩. নির্দিষ্ট যে ট্যাবে ক্লিক করা হয়েছে সেটির কন্টেন্ট দেখান এবং বাটনে active ক্লাস যোগ করুন
+    var currentTab = document.getElementById(tabName);
+    if (currentTab) {
+        currentTab.style.display = "block";
+        // CSS fadeIn অ্যানিমেশনটি সক্রিয় করার জন্য একটি মাইক্রো-ডিলে দেওয়া হয়েছে
+        setTimeout(function() {
+            currentTab.classList.add("active");
+        }, 10);
+    }
+    
+    evt.currentTarget.classList.add("active");
+}
+
     </script>
 
 </body>
