@@ -380,89 +380,90 @@ body {
    নতুন আধুনিক লেজার গ্যালারি ডিজাইন (Interactive Overlay Layout)
    ========================================================================== */
 
-/* ৩ কলমের রেসপন্সিভ গ্যালারি গ্রিড */
-.leisure-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* ==========================================================================
+   আল্ট্রা-ক্লিন অ্যাকাডেমিক লেজার ডিজাইন (Matches Project Cards)
+   ========================================================================== */
+
+/* পুরো সেকশনের লিস্ট কন্টেইনার */
+.leisure-clean-list {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     margin-top: 25px;
 }
 
-/* প্রতিটি গ্যালারি আইটেমের কন্টেইনার */
-.gallery-item {
-    position: relative;
-    border-radius: var(--radius); /* আপনার পোর্টালের মূল রাউন্ড শেপ ব্যবহার করা হয়েছে */
-    overflow: hidden;
-    height: 300px;
+/* প্রজেক্ট কার্ডের মতো হুবহু ব্যাকগ্রাউন্ড ও বর্ডার স্টাইল */
+.leisure-row-card {
+    display: flex;
+    gap: 25px;
+    background-color: var(--surface);
     border: 1px solid var(--border);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    align-items: center;
+    position: relative;
+    transition: transform 0.2s ease;
 }
 
-/* মাউস উপরে নিলে পুরো কার্ডটি সামান্য উপরে উঠবে */
-.gallery-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+/* আপনার প্রজেক্টের মতোই বাম পাশে একটি সুন্দর নীল প্রফেশনাল বর্ডার লাইন */
+.boundary-leisure { 
+    border-left: 4px solid var(--accent); 
+    border-radius: 4px var(--radius) var(--radius) 4px; 
 }
 
-/* ব্যাকগ্রাউন্ড ইমেজ প্রোপার্টিজ */
-.gallery-img {
+.leisure-row-card:hover {
+    transform: translateY(-2px);
+}
+
+/* ছবি রাখার মিনিমাল ফ্রেম */
+.leisure-row-img-wrapper {
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: calc(var(--radius) - 6px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+.leisure-row-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-/* হোভার করলে ইমেজ জুম ইফেক্ট */
-.gallery-item:hover .gallery-img {
-    transform: scale(1.1);
+/* টেক্সট এরিয়া */
+.leisure-row-details {
+    flex: 1;
 }
 
-/* ইমেজের ওপরের কালো আবছা পর্দা (Overlay) */
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(17, 24, 39, 0.9) 0%, rgba(17, 24, 39, 0.4) 60%, rgba(17, 24, 39, 0) 100%);
-    display: flex;
-    align-items: flex-end;
-    padding: 20px;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
-}
-
-/* টেক্সট অ্যানিমেশন কন্টেইনার */
-.gallery-text {
-    transform: translateY(10px);
-    transition: transform 0.3s ease;
-}
-
-/* হোভার করলে টেক্সট হালকা উপরে উঠবে */
-.gallery-item:hover .gallery-text {
-    transform: translateY(0);
-}
-
-/* গ্যালারির ভেতরের টাইটেল (সাদা রঙ করা হয়েছে ব্যাকগ্রাউন্ডের সাথে ম্যাচ করার জন্য) */
-.gallery-text h4 {
-    color: #ffffff;
-    font-size: 1.1rem;
+/* টাইটেল স্টাইল (আপনার প্রজেক্ট টাইটেলের মতো সাইজ) */
+.leisure-row-details h4 {
+    font-size: 0.95rem;
     font-weight: 700;
-    margin-bottom: 8px;
+    color: var(--text-primary);
+    margin-bottom: 6px;
 }
 
-/* গ্যালারির ভেতরের ছোট বিবরণ */
-.gallery-text p {
-    color: #e5e7eb;
-    font-size: 0.8rem;
-    line-height: 1.4;
-    margin: 0;
+/* বিবরণ স্টাইল */
+.leisure-row-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.5;
 }
 
-/* মোবাইল ডিভাইসের জন্য স্পেশাল এডজাস্টমেন্ট */
-@media(max-width: 480px) {
-    .gallery-item {
-        height: 250px;
+/* মোবাইল রেসপন্সিভ ওভাররাইড (মোবাইলে ছবি উপরে এবং টেক্সট নিচে চলে যাবে) */
+@media(max-width: 600px) {
+    .leisure-row-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+    .leisure-row-img-wrapper {
+        width: 100%;
+        height: 150px;
     }
 }
+
 
 
 
