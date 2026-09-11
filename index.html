@@ -324,25 +324,38 @@ document.addEventListener("DOMContentLoaded", function() {
     const tabs = document.querySelectorAll(".tab-btn");
     const contents = document.querySelectorAll(".tab-content");
 
-    tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            // বাটনের data-tab অ্যাট্রিবিউট থেকে নাম নেওয়া (যেমন: biography, projects)
-            const targetId = tab.getAttribute("data-tab"); 
-            const targetContent = document.getElementById(targetId);
+    // ১. পেজ লোড হওয়ার সাথে সাথে প্রথম ট্যাব ও কন্টেন্ট ডিফল্টভাবে সচল করা
+    if (tabs.length > 0 && contents.length > 0) {
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+        
+        tabs[0].classList.add("active");
+        contents[0].classList.add("active");
+    }
 
-            if (targetContent) {
-                // ১. সব বাটন এবং কন্টেন্ট থেকে active ক্লাস সরানো
-                tabs.forEach(t => t.classList.remove("active"));
-                contents.forEach(c => c.classList.remove("active"));
+    // ২. ট্যাব পরিবর্তনের জন্য নিরাপদ ক্লিক ইভেন্ট হ্যান্ডলার
+    tabs.forEach((tab, index) => {
+        tab.addEventListener("click", function(event) {
+            // অন্য কোনো স্ক্রিপ্টের সাথে যেন কনফ্লিক্ট বা জ্যাম না লাগে তার সুরক্ষাকবচ
+            event.preventDefault();
+            event.stopPropagation();
 
-                // ২. নির্দিষ্ট বাটন এবং কন্টেন্টে active ক্লাস যোগ করা
-                tab.classList.add("active");
-                targetContent.classList.add("active");
+            // সব বাটন ও কন্টেন্ট থেকে active ক্লাস পরিষ্কার করা
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+
+            // ক্লিক করা ট্যাব অ্যাক্টিভেট করা
+            this.classList.add("active");
+
+            // সংশ্লিষ্ট কন্টেন্ট সেকশনটি দৃশ্যমান করা
+            if (contents[index]) {
+                contents[index].classList.add("active");
             }
         });
     });
 });
 </script>
+
 
 
 </body>
