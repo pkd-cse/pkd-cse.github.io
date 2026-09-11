@@ -319,24 +319,31 @@ function closeLightbox() {
 
 
 
-      <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const tabs = document.querySelectorAll(".tab-btn");
-        const contents = document.querySelectorAll(".tab-content");
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
 
-        tabs.forEach((tab, index) => {
-            tab.addEventListener("click", () => {
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            // বাটনের data-tab অ্যাট্রিবিউট থেকে নাম নেওয়া (যেমন: biography, projects)
+            const targetId = tab.getAttribute("data-tab"); 
+            const targetContent = document.getElementById(targetId);
+
+            if (targetContent) {
+                // ১. সব বাটন এবং কন্টেন্ট থেকে active ক্লাস সরানো
                 tabs.forEach(t => t.classList.remove("active"));
                 contents.forEach(c => c.classList.remove("active"));
 
+                // ২. নির্দিষ্ট বাটন এবং কন্টেন্টে active ক্লাস যোগ করা
                 tab.classList.add("active");
-                if (contents[index]) {
-                    contents[index].classList.add("active");
-                }
-            });
+                targetContent.classList.add("active");
+            }
         });
     });
-    </script>
+});
+</script>
+
 
 </body>
 </html>
