@@ -319,42 +319,51 @@ function closeLightbox() {
 
 
 
-    <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const tabs = document.querySelectorAll(".tab-btn");
-    const contents = document.querySelectorAll(".tab-content");
-
+   <script>
+(function() {
     // ১. পেজ লোড হওয়ার সাথে সাথে প্রথম ট্যাব ও কন্টেন্ট ডিফল্টভাবে সচল করা
-    if (tabs.length > 0 && contents.length > 0) {
-        tabs.forEach(t => t.classList.remove("active"));
-        contents.forEach(c => c.classList.remove("active"));
+    window.addEventListener("DOMContentLoaded", function() {
+        const tabs = document.querySelectorAll(".tab-btn");
+        const contents = document.querySelectorAll(".tab-content");
         
-        tabs[0].classList.add("active");
-        contents[0].classList.add("active");
-    }
+        if (tabs.length > 0 && contents.length > 0) {
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+            
+            tabs[0].classList.add("active");
+            contents[0].classList.add("active");
+        }
+    });
 
-    // ২. ট্যাব পরিবর্তনের জন্য নিরাপদ ক্লিক ইভেন্ট হ্যান্ডলার
-    tabs.forEach((tab, index) => {
-        tab.addEventListener("click", function(event) {
-            // অন্য কোনো স্ক্রিপ্টের সাথে যেন কনফ্লিক্ট বা জ্যাম না লাগে তার সুরক্ষাকবচ
-            event.preventDefault();
-            event.stopPropagation();
+    // ২. আল্ট্রা-নিরাপদ ইভেন্ট ডেলিগেশন (যা Leisure ট্যাবের জ্যাম বা ক্র্যাশকে সম্পূর্ণ বাইপাস করবে)
+    document.addEventListener("click", function(event) {
+        // ক্লিক করা উপাদানটি tab-btn কি না তা নিশ্চিত করা
+        const clickedTab = event.target.closest(".tab-btn");
+        if (!clickedTab) return;
 
-            // সব বাটন ও কন্টেন্ট থেকে active ক্লাস পরিষ্কার করা
+        // অন্য কোনো স্ক্রিপ্টের ভাঙা কোড যেন এখানে ডিস্টার্ব না করে তার প্রটেকশন
+        event.preventDefault();
+        event.stopPropagation();
+
+        const tabs = Array.from(document.querySelectorAll(".tab-btn"));
+        const contents = document.querySelectorAll(".tab-content");
+        const targetIndex = tabs.indexOf(clickedTab);
+
+        if (targetIndex !== -1) {
+            // সব বাটন ও কন্টেন্ট থেকে active ক্লাস রিসেট করা
             tabs.forEach(t => t.classList.remove("active"));
             contents.forEach(c => c.classList.remove("active"));
 
-            // ক্লিক করা ট্যাব অ্যাক্টিভেট করা
-            this.classList.add("active");
-
-            // সংশ্লিষ্ট কন্টেন্ট সেকশনটি দৃশ্যমান করা
-            if (contents[index]) {
-                contents[index].classList.add("active");
+            // ক্লিক করা ট্যাব এবং তার নির্দিষ্ট কন্টেন্ট সচল করা
+            clickedTab.classList.add("active");
+            if (contents[targetIndex]) {
+                contents[targetIndex].classList.add("active");
             }
-        });
-    });
-});
+        }
+    }, true); // 'true' ব্যবহারের কারণে এটি যেকোনো ক্র্যাশ স্ক্রিপ্টের আগেই এক্সিকিউট হবে
+})();
 </script>
+
 
 
 
