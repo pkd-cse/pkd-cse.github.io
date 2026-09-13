@@ -243,7 +243,8 @@ body {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 15px;
-    text-align: justify; 
+    text-align: justify !important; /* Forces justification */
+    text-justify: inter-word !important; /* Optimizes spacing between words */ 
     
 }
 
