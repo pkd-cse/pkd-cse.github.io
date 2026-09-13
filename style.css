@@ -243,6 +243,7 @@ body {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 15px;
+    text-align: justify; 
     
 }
 
