@@ -236,16 +236,16 @@ body {
 .bio-card h3 {
     margin-bottom: 15px;
     font-size: 1.2rem;
-    text-align: justify; 
 }
 
 .tab-intro-text {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 15px;
-    text-align: justify !important; /* Forces justification */
-    text-justify: inter-word !important; /* Optimizes spacing between words */ 
-    
+    text-align: justify; /* Forces justification */
+    text-justify: inter-word; /* Optimizes spacing between words */ 
+    hyphens: auto;                       /* Gracefully breaks ultra-long words if necessary */
+    word-break: break-word;
 }
 
 .text-accent {
