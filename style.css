@@ -230,6 +230,7 @@ body {
     border-radius: var(--radius);
     padding: 30px;
     color: var(--navy--blue);
+    text-align: justify; 
 }
 
 .bio-card h3 {
@@ -241,7 +242,7 @@ body {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 15px;
-    text-align: justify; 
+    
 }
 
 .text-accent {
